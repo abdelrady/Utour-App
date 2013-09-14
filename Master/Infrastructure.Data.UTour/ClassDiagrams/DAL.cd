@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.UTOURDBEntities" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJACCMgIAAEAgSCAiEgAAGQgAIACACAAADAAFhAAAAA=</HashCode>
+      <FileName>Context\UTourEntities.Context.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.SelfTrackingEntitiesContextExtensions" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.SelfTrackingEntitiesContextExtensions.AddHelper" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Context\UTourEntities.Context.Extensions.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.SelfTrackingEntitiesContextExtensions.EntityIndex" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Context\UTourEntities.Context.Extensions.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.SelfTrackingEntitiesContextExtensions.RelationshipSet" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Context\UTourEntities.Context.Extensions.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+      <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.SelfTrackingEntitiesContextExtensions.RelationshipWrapper" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Context\UTourEntities.Context.Extensions.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAgAAIAAMABAAkAEABIgAACQQIAAAgAESAAAAAAAAjA=</HashCode>
+      <FileName>Context\UTourEntities.Context.Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.AdminUsersRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Repositories\AdminUsersRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.LayerHotSpotsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\LayerHotSpotsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.MonumentPhotosRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MonumentPhotosRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.MonumentRatingRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MonumentRatingRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.MonumentReviewsRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MonumentReviewsRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.MonumentVideosRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MonumentVideosRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.TouristRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\TouristRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.UploadedPhotoRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\UploadedPhotoRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ITI.Common.Utilities.Data.Core.ExtendedRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITI.Common.Utilities.Data.Core.Repository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="2" Y="6" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="ITI.Nlayerd.Infrastructure.Data.UTour.UnitOfWork.IUTourUnitOfWork" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAiAAAACAAAAACAAAAABAAEhAAAAA=</HashCode>
+      <FileName>UnitOfWork\IUTourUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Domain.Contracts.IAdminUsersRepository">
+    <Position X="9.75" Y="0.5" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.ILayerHotSpotsRepository" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.IMonumentPhotosRepository">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.IMonumentRatingRepository" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.IMonumentReviewsRepository" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.IMonumentVideosRepository" Collapsed="true">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.ITouristRepository" Collapsed="true">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.IUploadedPhotoRepository" Collapsed="true">
+    <Position X="8.75" Y="3" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Data.Core.IQueryableUnitOfWork" Collapsed="true">
+    <Position X="7.25" Y="11" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.ISQL" Collapsed="true">
+    <Position X="7.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IUnitOfWork" Collapsed="true">
+    <Position X="7.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IExtendedRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="12.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="12.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

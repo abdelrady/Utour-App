@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo" />
+  <xs:element name="RetrieveHotSpots">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lon" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="developerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="developerHash" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="radius" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="timestamp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lat" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="layerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="accuracy" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveHotSpotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo" minOccurs="0" name="RetrieveHotSpotsResult" nillable="true" type="q1:LayerInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

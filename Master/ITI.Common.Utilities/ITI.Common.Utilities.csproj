@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D82F0DE-2067-4A01-9EC9-8302B82CC2AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITI.Common.Utilities</RootNamespace>
+    <AssemblyName>ITI.Common.Utilities</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>EFG.Common.Utilities.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/EFG.Common.Utilities/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ITI.Common.Utilities.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Core\ExtendedRepository.cs" />
+    <Compile Include="Data\Core\Extensions\IQueryableExtensions.cs" />
+    <Compile Include="Data\Core\Extensions\ListExtensions.cs" />
+    <Compile Include="Data\Core\Extensions\ObjectStateManagerExtensions.cs" />
+    <Compile Include="Data\Core\IQueryableUnitOfWork.cs" />
+    <Compile Include="Data\Core\MemorySet.cs" />
+    <Compile Include="Data\Core\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Core\Repository.cs" />
+    <Compile Include="Diagnostics\Trace\ITraceManager.cs" />
+    <Compile Include="Diagnostics\Trace\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostics\Trace\TraceManager.cs" />
+    <Compile Include="Domain\Core\Entities\ChangeTrackerExtensions.cs" />
+    <Compile Include="Domain\Core\Entities\ChangeTrackerIterator.cs" />
+    <Compile Include="Domain\Core\Entities\ObjectChangeTracker.Types.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ObjectChangeTracker.Types.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\Core\IExtendedRepository.cs" />
+    <Compile Include="Domain\Core\IRepository.cs" />
+    <Compile Include="Domain\Core\ISQL.cs" />
+    <Compile Include="Domain\Core\IUnitOfWork.cs" />
+    <Compile Include="Domain\Core\Specification\AndSpecification.cs" />
+    <Compile Include="Domain\Core\Specification\CompositeSpecification.cs" />
+    <Compile Include="Domain\Core\Specification\DirectSpecification.cs" />
+    <Compile Include="Domain\Core\Specification\ExpressionBuilder.cs" />
+    <Compile Include="Domain\Core\Specification\ISpecification.cs" />
+    <Compile Include="Domain\Core\Specification\NotSpecification.cs" />
+    <Compile Include="Domain\Core\Specification\OrSpecification.cs" />
+    <Compile Include="Domain\Core\Specification\ParametersRebinder.cs" />
+    <Compile Include="Domain\Core\Specification\Specification.cs" />
+    <Compile Include="Domain\Core\Specification\TrueSpecification.cs" />
+    <Compile Include="Domain\Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\IErrorCoded.cs" />
+    <Compile Include="Exceptions\InvalidUserTypeException.cs" />
+    <Compile Include="Exceptions\NotValidUserInfoException.cs" />
+    <Compile Include="Exceptions\PropertyAccessException.cs" />
+    <Compile Include="Exceptions\PropertyChangeEventArgs.cs" />
+    <Compile Include="Exceptions\ReflectionException.cs" />
+    <Compile Include="Exceptions\TypeMismatchException.cs" />
+    <Compile Include="General\ActiveDirectoryManager.cs" />
+    <Compile Include="General\Collections\Arrays.cs" />
+    <Compile Include="General\Collections\CollectionUtilities.cs" />
+    <Compile Include="General\Collections\EmptyEnumerable.cs" />
+    <Compile Include="General\Collections\EnumerableProxy.cs" />
+    <Compile Include="General\Collections\Enums.cs" />
+    <Compile Include="General\Collections\HashSet.cs" />
+    <Compile Include="General\Collections\ISet.cs" />
+    <Compile Include="General\Collections\LinkedDictionary.cs" />
+    <Compile Include="General\Collections\UnmodifiableDictionary.cs" />
+    <Compile Include="General\Collections\UnmodifiableDictionaryProxy.cs" />
+    <Compile Include="General\Collections\UnmodifiableList.cs" />
+    <Compile Include="General\Collections\UnmodifiableListProxy.cs" />
+    <Compile Include="General\Collections\UnmodifiableSet.cs" />
+    <Compile Include="General\Collections\UnmodifiableSetProxy.cs" />
+    <Compile Include="General\Datetime\DateTimeObject.cs" />
+    <Compile Include="General\Datetime\DateTimeUtilities.cs" />
+    <Compile Include="General\Encoders\Base64.cs" />
+    <Compile Include="General\Encoders\Base64Encoder.cs" />
+    <Compile Include="General\Encoders\BufferedDecoder.cs" />
+    <Compile Include="General\Encoders\BufferedEncoder.cs" />
+    <Compile Include="General\Encoders\Hex.cs" />
+    <Compile Include="General\Encoders\HexEncoder.cs" />
+    <Compile Include="General\Encoders\HexTranslator.cs" />
+    <Compile Include="General\Encoders\IEncoder.cs" />
+    <Compile Include="General\Encoders\Translator.cs" />
+    <Compile Include="General\Encoders\UrlBase64.cs" />
+    <Compile Include="General\Encoders\UrlBase64Encoder.cs" />
+    <Compile Include="General\Environment\Platform.cs" />
+    <Compile Include="General\HashingMethods.cs" />
+    <Compile Include="General\MailSender.cs" />
+    <Compile Include="General\SafeBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="General\StringUtilities.cs" />
+    <Compile Include="General\String\Strings.cs" />
+    <Compile Include="IO\Compressions\BZip2\BZip2Constants.cs" />
+    <Compile Include="IO\Compressions\BZip2\CBZip2InputStream.cs" />
+    <Compile Include="IO\Compressions\BZip2\CBZip2OutputStream.cs" />
+    <Compile Include="IO\Compressions\BZip2\CRC.cs" />
+    <Compile Include="IO\Compressions\Compressor.cs" />
+    <Compile Include="IO\Compressions\ZipPackage.cs" />
+    <Compile Include="IO\Compressions\Zlib\Adler32.cs" />
+    <Compile Include="IO\Compressions\Zlib\Deflate.cs" />
+    <Compile Include="IO\Compressions\Zlib\InfBlocks.cs" />
+    <Compile Include="IO\Compressions\Zlib\InfCodes.cs" />
+    <Compile Include="IO\Compressions\Zlib\Inflate.cs" />
+    <Compile Include="IO\Compressions\Zlib\InfTree.cs" />
+    <Compile Include="IO\Compressions\Zlib\JZlib.cs" />
+    <Compile Include="IO\Compressions\Zlib\StaticTree.cs" />
+    <Compile Include="IO\Compressions\Zlib\Tree.cs" />
+    <Compile Include="IO\Compressions\Zlib\ZInputStream.cs" />
+    <Compile Include="IO\Compressions\Zlib\ZOutputStream.cs" />
+    <Compile Include="IO\Compressions\Zlib\ZStream.cs" />
+    <Compile Include="IO\Streams\BaseInputStream.cs" />
+    <Compile Include="IO\Streams\BaseOutputStream.cs" />
+    <Compile Include="IO\Streams\FilterStream.cs" />
+    <Compile Include="IO\Streams\Perm\Class1.cs" />
+    <Compile Include="IO\Streams\Perm\PemGenerationException.cs" />
+    <Compile Include="IO\Streams\Perm\PemHeader.cs" />
+    <Compile Include="IO\Streams\Perm\PemObject.cs" />
+    <Compile Include="IO\Streams\Perm\PemObjectGenerator.cs" />
+    <Compile Include="IO\Streams\Perm\PemObjectParser.cs" />
+    <Compile Include="IO\Streams\Perm\PemReader.cs" />
+    <Compile Include="IO\Streams\Perm\PemWriter.cs" />
+    <Compile Include="IO\Streams\PushbackStream.cs" />
+    <Compile Include="IO\Streams\StreamOverflowException.cs" />
+    <Compile Include="IO\Streams\Streams.cs" />
+    <Compile Include="IO\Streams\TeeInputStream.cs" />
+    <Compile Include="IO\Streams\TeeOutputStream.cs" />
+    <Compile Include="LINQ\Extensions\Equality.cs" />
+    <Compile Include="LINQ\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Net\IPAddress.cs" />
+    <Compile Include="Presentation\WPF\MVVM\ViewModelBase\DelegateCommand.cs" />
+    <Compile Include="Presentation\WPF\MVVM\ViewModelBase\ObservableObject.cs" />
+    <Compile Include="Presentation\WPF\Notifications\NotificationWindowBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IO\Enms\ObjectType.cs" />
+    <Compile Include="IO\ExtendedBinaryReader.cs" />
+    <Compile Include="IO\ExtendedBinaryWriter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Runtime\Serialization\Encoders\GZip\GZipMessageEncoderFactory.cs" />
+    <Compile Include="Runtime\Serialization\Encoders\GZip\GZipMessageEncodingBindingElement.cs" />
+    <Compile Include="Runtime\Serialization\Encoders\GZip\GZipMessageEncodingBindingElementImporter.cs" />
+    <Compile Include="Runtime\Serialization\Formatters\Binary\CustomBinaryFormatter.cs" />
+    <Compile Include="Runtime\Serialization\ICustomSerializable.cs" />
+    <Compile Include="ServiceModel\Faults\CallbackErrorHandlerAttribute.cs" />
+    <Compile Include="ServiceModel\Faults\ErrorHandlerAttribute.cs" />
+    <Compile Include="ServiceModel\Faults\ErrorHandlerHelper.cs" />
+    <Compile Include="ServiceModel\Faults\EventLogErrorHandler.cs" />
+    <Compile Include="ServiceModel\Faults\Interfaces\ICustomErrorHandler.cs" />
+    <Compile Include="ServiceModel\Faults\CustomErrorHandler.cs" />
+    <Compile Include="ServiceModel\Faults\Logger\Data\bzLogEntries.cs" />
+    <Compile Include="ServiceModel\Faults\Logger\Data\dmLogEntries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceModel\Faults\Logger\Data\dmLogEntries.Designer.cs">
+      <DependentUpon>dmLogEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceModel\Faults\Logger\Data\LogEntries.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogEntries.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceModel\Faults\Logger\Entry.cs" />
+    <Compile Include="ServiceModel\Faults\ErrorHandlersConfig.cs" />
+    <Compile Include="ServiceModel\Faults\Logger\ILogger.cs" />
+    <Compile Include="ServiceModel\Faults\Logger\Logger.cs" />
+    <Compile Include="ServiceModel\Faults\Logger\LoggerProxy.cs" />
+    <Compile Include="ServiceModel\Logging\WcfMessageLoggerExtension.cs" />
+    <Compile Include="Threading\ProcessBase.cs" />
+    <Compile Include="Threading\Scheduler\EventStorage.cs" />
+    <Compile Include="Threading\Scheduler\EventTimeBase.cs" />
+    <Compile Include="Threading\Scheduler\IScheduledItem.cs" />
+    <Compile Include="Threading\Scheduler\MethodCall.cs" />
+    <Compile Include="Threading\Scheduler\ScheduledTime.cs" />
+    <Compile Include="Threading\Scheduler\ScheduleTimer.cs" />
+    <Compile Include="Threading\Scheduler\TimerJob.cs" />
+    <Compile Include="TypeResolution\CachedTypeResolver.cs" />
+    <Compile Include="TypeResolution\ITypeAdapter.cs" />
+    <Compile Include="TypeResolution\ITypeMapConfigurationBase.cs" />
+    <Compile Include="TypeResolution\ITypeResolver.cs" />
+    <Compile Include="TypeResolution\RegisterTypesMap.cs" />
+    <Compile Include="TypeResolution\TypeAdapter.cs" />
+    <Compile Include="TypeResolution\TypeMapConfiguration.cs" />
+    <Compile Include="TypeResolution\TypeMapConfigurationBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Domain\Core\Entities\ObjectChangeTracker.Types.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ObjectChangeTracker.Types.cs</LastGenOutput>
+    </None>
+    <None Include="EFG.Common.Utilities.snk" />
+    <None Include="ServiceModel\Faults\Logger\Data\LogEntries.xsc">
+      <DependentUpon>LogEntries.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceModel\Faults\Logger\Data\LogEntries.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LogEntries.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServiceModel\Faults\Logger\Data\LogEntries.xss">
+      <DependentUpon>LogEntries.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\Core\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnostics\Trace\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Domain\Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceModel\Faults\Logger\Data\dmLogEntries.resx">
+      <DependentUpon>dmLogEntries.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Core\Test\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

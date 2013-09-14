@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NewAdminMasterPage.master.cs" Inherits="NewAdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="~/default.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   
+        <div id="UpperBorder"></div>
+
+<div id="logo">
+	<div style="width:29%; float:left; position:relative; top:-30px;">
+        <img src="images/UTourLogo_04.png" style="height: 104px; width: 243px" /></div>
+	<!--<h1><a href="#">Capsicum</a></h1>-->
+	<div style="width:70%; float:right"><p style="color:#fab04a; font-size:20px">Be your own guide</p></div>
+</div>
+<div id="content">
+	<div id="sidebar">
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="#" title="">HomePage</a></li>
+				<li><a href="Admin_layerhotspots.aspx" title="">Manage Layerhostspots</a></li>
+                <li><a href="Admin_Tourists.aspx" title="">Manage Tourists</a></li>
+				<li><a href="Admin_Users.aspx" title="">Manage Admins</a></li>
+				<li><a href="Admin_City.aspx" title="">Manage Cities</a></li>
+				<li><a href="Admin_Monument_Ratings.aspx" title="">Manage Monument Ratings</a></li>
+				<li><a href="Admin_Monuments_Photos.aspx" title="">Manage Monuments Photos</a></li>
+                <li><a href="Admin_Monuments_Reviews.aspx" title="">Manage Monuments Reviews</a></li>
+                <li><a href="Admin_Monuments_Videos.aspx" title="">Manage Monuments Videos</a></li>
+                <li><a href="Admin_UploadedPhotos.aspx" title="">Manage UploadedPhotos</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="main">
+   
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  	
+	</div>
+	<div id="extra"></div>
+</div>
+<div id="footer">
+	<p style="font-size:15px" id="legal">Copyright &copy; 2012 UTour All Rights Reserved. Designed by UTour Team.</p>
+	<p style="font-size:15px" id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+</div>
+<%--<div align="center">This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>--%>
+<div id="FootBorder"></div>
+    </form>
+</body>
+</html>

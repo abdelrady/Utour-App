@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UTOURDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="UTOURDBModelStoreContainer">
+          <EntitySet Name="Admin_Users" EntityType="UTOURDBModel.Store.Admin_Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="cities" EntityType="UTOURDBModel.Store.cities" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="layerhotspots" EntityType="UTOURDBModel.Store.layerhotspots" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LayerTable" EntityType="UTOURDBModel.Store.LayerTable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Monument_Ratings" EntityType="UTOURDBModel.Store.Monument_Ratings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Monuments_Photos" EntityType="UTOURDBModel.Store.Monuments_Photos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Monuments_Reviews" EntityType="UTOURDBModel.Store.Monuments_Reviews" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Monuments_Videos" EntityType="UTOURDBModel.Store.Monuments_Videos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="UTOURDBModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tourists" EntityType="UTOURDBModel.Store.Tourists" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UploadedPhotos" EntityType="UTOURDBModel.Store.UploadedPhotos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_Membership" EntityType="UTOURDBModel.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="UTOURDBModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_Roles" EntityType="UTOURDBModel.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserProfile" EntityType="UTOURDBModel.Store.UserProfile" store:Type="Tables" Schema="IIS APPPOOL\DefaultAppPool" />
+          <AssociationSet Name="FK_layerhotspots_city" Association="UTOURDBModel.Store.FK_layerhotspots_city">
+            <End Role="cities" EntitySet="cities" />
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monument_Ratings_layerhotspots" Association="UTOURDBModel.Store.FK_Monument_Ratings_layerhotspots">
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+            <End Role="Monument_Ratings" EntitySet="Monument_Ratings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monument_Ratings_Tourists" Association="UTOURDBModel.Store.FK_Monument_Ratings_Tourists">
+            <End Role="Tourists" EntitySet="Tourists" />
+            <End Role="Monument_Ratings" EntitySet="Monument_Ratings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Photos_layerhotspots" Association="UTOURDBModel.Store.FK_Monuments_Photos_layerhotspots">
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+            <End Role="Monuments_Photos" EntitySet="Monuments_Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Reviews_layerhotspots" Association="UTOURDBModel.Store.FK_Monuments_Reviews_layerhotspots">
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+            <End Role="Monuments_Reviews" EntitySet="Monuments_Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Reviews_Tourists" Association="UTOURDBModel.Store.FK_Monuments_Reviews_Tourists">
+            <End Role="Tourists" EntitySet="Tourists" />
+            <End Role="Monuments_Reviews" EntitySet="Monuments_Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Videos_layerhotspots" Association="UTOURDBModel.Store.FK_Monuments_Videos_layerhotspots">
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+            <End Role="Monuments_Videos" EntitySet="Monuments_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UploadedPhotos_layerhotspots" Association="UTOURDBModel.Store.FK_UploadedPhotos_layerhotspots">
+            <End Role="layerhotspots" EntitySet="layerhotspots" />
+            <End Role="UploadedPhotos" EntitySet="UploadedPhotos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UploadedPhotos_Tourists" Association="UTOURDBModel.Store.FK_UploadedPhotos_Tourists">
+            <End Role="Tourists" EntitySet="Tourists" />
+            <End Role="UploadedPhotos" EntitySet="UploadedPhotos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admin_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="cities">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="layerhotspots">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="footnote" Type="nvarchar" MaxLength="150" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" />
+          <Property Name="lat" Type="decimal" Precision="13" Scale="10" />
+          <Property Name="lon" Type="decimal" Precision="13" Scale="10" />
+          <Property Name="imageurl" Type="varchar" MaxLength="255" />
+          <Property Name="description" Type="nvarchar" MaxLength="255" />
+          <Property Name="biwStyle" Type="varchar" MaxLength="50" />
+          <Property Name="alt" Type="int" />
+          <Property Name="doNotIndex" Type="tinyint" />
+          <Property Name="showSmallBiw" Type="tinyint" />
+          <Property Name="showBiwOnClick" Type="tinyint" />
+          <Property Name="poiType" Type="varchar" MaxLength="50" />
+          <Property Name="Monument_Audio" Type="nvarchar" MaxLength="255" />
+          <Property Name="Long_Description" Type="nvarchar(max)" />
+          <Property Name="CityID" Type="int" />
+        </EntityType>
+        <EntityType Name="LayerTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="footnote" Type="nvarchar" MaxLength="150" />
+          <Property Name="title" Type="nvarchar" MaxLength="150" />
+          <Property Name="lat" Type="decimal" Precision="13" Scale="10" />
+          <Property Name="lon" Type="decimal" Precision="13" Scale="10" />
+          <Property Name="imageurl" Type="varchar" MaxLength="255" />
+          <Property Name="description" Type="nvarchar" MaxLength="150" />
+          <Property Name="biwStyle" Type="varchar" MaxLength="50" />
+          <Property Name="alt" Type="int" />
+          <Property Name="doNotIndex" Type="tinyint" />
+          <Property Name="showSmallBiw" Type="tinyint" />
+          <Property Name="showBiwOnClick" Type="tinyint" />
+          <Property Name="poiType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Monument_Ratings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tourist_ID" Type="int" Nullable="false" />
+          <Property Name="hotSpotID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Rate" Type="float" />
+        </EntityType>
+        <EntityType Name="Monuments_Photos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="hostSpotID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ImageUrl" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Monuments_Reviews">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Tourist_ID" Type="int" Nullable="false" />
+          <Property Name="hotSpotID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Review" Type="nvarchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Monuments_Videos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="hostSpotID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="video" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="VideoLength" Type="nvarchar" MaxLength="10" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tourists">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="First_Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Preferred_Language" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="UploadedPhotos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="TouristID" Type="int" Nullable="false" />
+          <Property Name="hotspotID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ImageUrl" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsConfirmed" Type="bit" />
+          <Property Name="LastPasswordFailureDate" Type="datetime" />
+          <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordChangedDate" Type="datetime" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+        </EntityType>
+        <Association Name="FK_layerhotspots_city">
+          <End Role="cities" Type="UTOURDBModel.Store.cities" Multiplicity="0..1" />
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="cities">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="layerhotspots">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monument_Ratings_layerhotspots">
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="1" />
+          <End Role="Monument_Ratings" Type="UTOURDBModel.Store.Monument_Ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monument_Ratings">
+              <PropertyRef Name="hotSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monument_Ratings_Tourists">
+          <End Role="Tourists" Type="UTOURDBModel.Store.Tourists" Multiplicity="1" />
+          <End Role="Monument_Ratings" Type="UTOURDBModel.Store.Monument_Ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourists">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monument_Ratings">
+              <PropertyRef Name="Tourist_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Photos_layerhotspots">
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="1" />
+          <End Role="Monuments_Photos" Type="UTOURDBModel.Store.Monuments_Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Photos">
+              <PropertyRef Name="hostSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Reviews_layerhotspots">
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="1" />
+          <End Role="Monuments_Reviews" Type="UTOURDBModel.Store.Monuments_Reviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Reviews">
+              <PropertyRef Name="hotSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Reviews_Tourists">
+          <End Role="Tourists" Type="UTOURDBModel.Store.Tourists" Multiplicity="1" />
+          <End Role="Monuments_Reviews" Type="UTOURDBModel.Store.Monuments_Reviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourists">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monuments_Reviews">
+              <PropertyRef Name="Tourist_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Videos_layerhotspots">
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="1" />
+          <End Role="Monuments_Videos" Type="UTOURDBModel.Store.Monuments_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Videos">
+              <PropertyRef Name="hostSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UploadedPhotos_layerhotspots">
+          <End Role="layerhotspots" Type="UTOURDBModel.Store.layerhotspots" Multiplicity="1" />
+          <End Role="UploadedPhotos" Type="UTOURDBModel.Store.UploadedPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspots">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UploadedPhotos">
+              <PropertyRef Name="hotspotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UploadedPhotos_Tourists">
+          <End Role="Tourists" Type="UTOURDBModel.Store.Tourists" Multiplicity="1" />
+          <End Role="UploadedPhotos" Type="UTOURDBModel.Store.UploadedPhotos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourists">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UploadedPhotos">
+              <PropertyRef Name="TouristID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UTOURDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="UTOURDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin_Users" EntityType="UTOURDBModel.Admin_Users" />
+          <EntitySet Name="cities" EntityType="UTOURDBModel.city" />
+          <EntitySet Name="LayerTables" EntityType="UTOURDBModel.LayerTable" />
+          <EntitySet Name="Monument_Ratings" EntityType="UTOURDBModel.Monument_Ratings" />
+          <EntitySet Name="Monuments_Photos" EntityType="UTOURDBModel.Monuments_Photos" />
+          <EntitySet Name="Monuments_Reviews" EntityType="UTOURDBModel.Monuments_Reviews" />
+          <EntitySet Name="Monuments_Videos" EntityType="UTOURDBModel.Monuments_Videos" />
+          <EntitySet Name="sysdiagrams" EntityType="UTOURDBModel.sysdiagram" />
+          <EntitySet Name="Tourists" EntityType="UTOURDBModel.Tourist" />
+          <EntitySet Name="webpages_Membership" EntityType="UTOURDBModel.webpages_Membership" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="UTOURDBModel.webpages_OAuthMembership" />
+          <EntitySet Name="webpages_Roles" EntityType="UTOURDBModel.webpages_Roles" />
+          <EntitySet Name="UserProfiles" EntityType="UTOURDBModel.UserProfile" />
+          <AssociationSet Name="FK_Monument_Ratings_Tourists" Association="UTOURDBModel.FK_Monument_Ratings_Tourists">
+            <End Role="Tourist" EntitySet="Tourists" />
+            <End Role="Monument_Ratings" EntitySet="Monument_Ratings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Reviews_Tourists" Association="UTOURDBModel.FK_Monuments_Reviews_Tourists">
+            <End Role="Tourist" EntitySet="Tourists" />
+            <End Role="Monuments_Reviews" EntitySet="Monuments_Reviews" />
+          </AssociationSet>
+          <EntitySet Name="UploadedPhotos" EntityType="UTOURDBModel.UploadedPhoto" />
+          <AssociationSet Name="FK_UploadedPhotos_Tourists" Association="UTOURDBModel.FK_UploadedPhotos_Tourists">
+            <End Role="Tourist" EntitySet="Tourists" />
+            <End Role="UploadedPhoto" EntitySet="UploadedPhotos" />
+          </AssociationSet>
+          <EntitySet Name="layerhotspots" EntityType="UTOURDBModel.layerhotspot" />
+          <AssociationSet Name="FK_layerhotspots_city" Association="UTOURDBModel.FK_layerhotspots_city">
+            <End Role="city" EntitySet="cities" />
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monument_Ratings_layerhotspots" Association="UTOURDBModel.FK_Monument_Ratings_layerhotspots">
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+            <End Role="Monument_Ratings" EntitySet="Monument_Ratings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Photos_layerhotspots" Association="UTOURDBModel.FK_Monuments_Photos_layerhotspots">
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+            <End Role="Monuments_Photos" EntitySet="Monuments_Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Reviews_layerhotspots" Association="UTOURDBModel.FK_Monuments_Reviews_layerhotspots">
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+            <End Role="Monuments_Reviews" EntitySet="Monuments_Reviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Monuments_Videos_layerhotspots" Association="UTOURDBModel.FK_Monuments_Videos_layerhotspots">
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+            <End Role="Monuments_Videos" EntitySet="Monuments_Videos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UploadedPhotos_layerhotspots" Association="UTOURDBModel.FK_UploadedPhotos_layerhotspots">
+            <End Role="layerhotspot" EntitySet="layerhotspots" />
+            <End Role="UploadedPhoto" EntitySet="UploadedPhotos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admin_Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="city">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Type="String" Name="CityName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="layerhotspots" Relationship="UTOURDBModel.FK_layerhotspots_city" FromRole="city" ToRole="layerhotspot" />
+        </EntityType>
+        <EntityType Name="LayerTable">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="footnote" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="title" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="lat" Precision="13" Scale="10" />
+          <Property Type="Decimal" Name="lon" Precision="13" Scale="10" />
+          <Property Type="String" Name="imageurl" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="description" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="biwStyle" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="alt" />
+          <Property Type="Byte" Name="doNotIndex" />
+          <Property Type="Byte" Name="showSmallBiw" />
+          <Property Type="Byte" Name="showBiwOnClick" />
+          <Property Type="String" Name="poiType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Monument_Ratings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Tourist_ID" Nullable="false" />
+          <Property Type="String" Name="hotSpotID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Rate" />
+          <NavigationProperty Name="Tourist" Relationship="UTOURDBModel.FK_Monument_Ratings_Tourists" FromRole="Monument_Ratings" ToRole="Tourist" />
+          <NavigationProperty Name="layerhotspot" Relationship="UTOURDBModel.FK_Monument_Ratings_layerhotspots" FromRole="Monument_Ratings" ToRole="layerhotspot" />
+        </EntityType>
+        <EntityType Name="Monuments_Photos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="hostSpotID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="layerhotspot" Relationship="UTOURDBModel.FK_Monuments_Photos_layerhotspots" FromRole="Monuments_Photos" ToRole="layerhotspot" />
+        </EntityType>
+        <EntityType Name="Monuments_Reviews">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Tourist_ID" Nullable="false" />
+          <Property Type="String" Name="hotSpotID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Review" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Tourist" Relationship="UTOURDBModel.FK_Monuments_Reviews_Tourists" FromRole="Monuments_Reviews" ToRole="Tourist" />
+          <NavigationProperty Name="layerhotspot" Relationship="UTOURDBModel.FK_Monuments_Reviews_layerhotspots" FromRole="Monuments_Reviews" ToRole="layerhotspot" />
+        </EntityType>
+        <EntityType Name="Monuments_Videos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="hostSpotID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="video" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VideoLength" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="layerhotspot" Relationship="UTOURDBModel.FK_Monuments_Videos_layerhotspots" FromRole="Monuments_Videos" ToRole="layerhotspot" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tourist">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="First_Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Last_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Gender" />
+          <Property Type="String" Name="Nationality" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Preferred_Language" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Monument_Ratings" Relationship="UTOURDBModel.FK_Monument_Ratings_Tourists" FromRole="Tourist" ToRole="Monument_Ratings" />
+          <NavigationProperty Name="Monuments_Reviews" Relationship="UTOURDBModel.FK_Monuments_Reviews_Tourists" FromRole="Tourist" ToRole="Monuments_Reviews" />
+          <NavigationProperty Name="UploadedPhotos" Relationship="UTOURDBModel.FK_UploadedPhotos_Tourists" FromRole="Tourist" ToRole="UploadedPhoto" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="String" Name="ConfirmationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsConfirmed" />
+          <Property Type="DateTime" Name="LastPasswordFailureDate" Precision="3" />
+          <Property Type="Int32" Name="PasswordFailuresSinceLastSuccess" Nullable="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PasswordChangedDate" Precision="3" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordVerificationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PasswordVerificationTokenExpirationDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Type="String" Name="Provider" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProviderUserId" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="56" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Monument_Ratings_Tourists">
+          <End Type="UTOURDBModel.Tourist" Role="Tourist" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monument_Ratings" Role="Monument_Ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourist">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monument_Ratings">
+              <PropertyRef Name="Tourist_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Reviews_Tourists">
+          <End Type="UTOURDBModel.Tourist" Role="Tourist" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monuments_Reviews" Role="Monuments_Reviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourist">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Monuments_Reviews">
+              <PropertyRef Name="Tourist_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UploadedPhoto">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="TouristID" Nullable="false" />
+          <Property Type="String" Name="hotspotID" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImageUrl" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Tourist" Relationship="UTOURDBModel.FK_UploadedPhotos_Tourists" FromRole="UploadedPhoto" ToRole="Tourist" />
+          <NavigationProperty Name="layerhotspot" Relationship="UTOURDBModel.FK_UploadedPhotos_layerhotspots" FromRole="UploadedPhoto" ToRole="layerhotspot" />
+        </EntityType>
+        <Association Name="FK_UploadedPhotos_Tourists">
+          <End Type="UTOURDBModel.Tourist" Role="Tourist" Multiplicity="1" />
+          <End Type="UTOURDBModel.UploadedPhoto" Role="UploadedPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tourist">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UploadedPhoto">
+              <PropertyRef Name="TouristID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="layerhotspot">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="String" Name="Id" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="footnote" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="title" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="lat" Precision="13" Scale="10" />
+          <Property Type="Decimal" Name="lon" Precision="13" Scale="10" />
+          <Property Type="String" Name="imageurl" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="description" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="biwStyle" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="alt" />
+          <Property Type="Byte" Name="doNotIndex" />
+          <Property Type="Byte" Name="showSmallBiw" />
+          <Property Type="Byte" Name="showBiwOnClick" />
+          <Property Type="String" Name="poiType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Monument_Audio" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Long_Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CityID" />
+          <NavigationProperty Name="city" Relationship="UTOURDBModel.FK_layerhotspots_city" FromRole="layerhotspot" ToRole="city" />
+          <NavigationProperty Name="Monument_Ratings" Relationship="UTOURDBModel.FK_Monument_Ratings_layerhotspots" FromRole="layerhotspot" ToRole="Monument_Ratings" />
+          <NavigationProperty Name="Monuments_Photos" Relationship="UTOURDBModel.FK_Monuments_Photos_layerhotspots" FromRole="layerhotspot" ToRole="Monuments_Photos" />
+          <NavigationProperty Name="Monuments_Reviews" Relationship="UTOURDBModel.FK_Monuments_Reviews_layerhotspots" FromRole="layerhotspot" ToRole="Monuments_Reviews" />
+          <NavigationProperty Name="Monuments_Videos" Relationship="UTOURDBModel.FK_Monuments_Videos_layerhotspots" FromRole="layerhotspot" ToRole="Monuments_Videos" />
+          <NavigationProperty Name="UploadedPhotos" Relationship="UTOURDBModel.FK_UploadedPhotos_layerhotspots" FromRole="layerhotspot" ToRole="UploadedPhoto" />
+        </EntityType>
+        <Association Name="FK_layerhotspots_city">
+          <End Type="UTOURDBModel.city" Role="city" Multiplicity="0..1" />
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="city">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="layerhotspot">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monument_Ratings_layerhotspots">
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monument_Ratings" Role="Monument_Ratings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspot">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monument_Ratings">
+              <PropertyRef Name="hotSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Photos_layerhotspots">
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monuments_Photos" Role="Monuments_Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspot">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Photos">
+              <PropertyRef Name="hostSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Reviews_layerhotspots">
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monuments_Reviews" Role="Monuments_Reviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspot">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Reviews">
+              <PropertyRef Name="hotSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Monuments_Videos_layerhotspots">
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="1" />
+          <End Type="UTOURDBModel.Monuments_Videos" Role="Monuments_Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspot">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Monuments_Videos">
+              <PropertyRef Name="hostSpotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UploadedPhotos_layerhotspots">
+          <End Type="UTOURDBModel.layerhotspot" Role="layerhotspot" Multiplicity="1" />
+          <End Type="UTOURDBModel.UploadedPhoto" Role="UploadedPhoto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="layerhotspot">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UploadedPhoto">
+              <PropertyRef Name="hotspotID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UTOURDBModelStoreContainer" CdmEntityContainer="UTOURDBEntities">
+          <EntitySetMapping Name="Admin_Users">
+            <EntityTypeMapping TypeName="UTOURDBModel.Admin_Users">
+              <MappingFragment StoreEntitySet="Admin_Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cities">
+            <EntityTypeMapping TypeName="UTOURDBModel.city">
+              <MappingFragment StoreEntitySet="cities">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LayerTables">
+            <EntityTypeMapping TypeName="UTOURDBModel.LayerTable">
+              <MappingFragment StoreEntitySet="LayerTable">
+                <ScalarProperty Name="poiType" ColumnName="poiType" />
+                <ScalarProperty Name="showBiwOnClick" ColumnName="showBiwOnClick" />
+                <ScalarProperty Name="showSmallBiw" ColumnName="showSmallBiw" />
+                <ScalarProperty Name="doNotIndex" ColumnName="doNotIndex" />
+                <ScalarProperty Name="alt" ColumnName="alt" />
+                <ScalarProperty Name="biwStyle" ColumnName="biwStyle" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="imageurl" ColumnName="imageurl" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="footnote" ColumnName="footnote" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monument_Ratings">
+            <EntityTypeMapping TypeName="UTOURDBModel.Monument_Ratings">
+              <MappingFragment StoreEntitySet="Monument_Ratings">
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="hotSpotID" ColumnName="hotSpotID" />
+                <ScalarProperty Name="Tourist_ID" ColumnName="Tourist_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monuments_Photos">
+            <EntityTypeMapping TypeName="UTOURDBModel.Monuments_Photos">
+              <MappingFragment StoreEntitySet="Monuments_Photos">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="hostSpotID" ColumnName="hostSpotID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monuments_Reviews">
+            <EntityTypeMapping TypeName="UTOURDBModel.Monuments_Reviews">
+              <MappingFragment StoreEntitySet="Monuments_Reviews">
+                <ScalarProperty Name="Review" ColumnName="Review" />
+                <ScalarProperty Name="hotSpotID" ColumnName="hotSpotID" />
+                <ScalarProperty Name="Tourist_ID" ColumnName="Tourist_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Monuments_Videos">
+            <EntityTypeMapping TypeName="UTOURDBModel.Monuments_Videos">
+              <MappingFragment StoreEntitySet="Monuments_Videos">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VideoLength" ColumnName="VideoLength" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="video" ColumnName="video" />
+                <ScalarProperty Name="hostSpotID" ColumnName="hostSpotID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="UTOURDBModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tourists">
+            <EntityTypeMapping TypeName="UTOURDBModel.Tourist">
+              <MappingFragment StoreEntitySet="Tourists">
+                <ScalarProperty Name="Preferred_Language" ColumnName="Preferred_Language" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Membership">
+            <EntityTypeMapping TypeName="UTOURDBModel.webpages_Membership">
+              <MappingFragment StoreEntitySet="webpages_Membership">
+                <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+                <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+                <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_OAuthMembership">
+            <EntityTypeMapping TypeName="UTOURDBModel.webpages_OAuthMembership">
+              <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Roles">
+            <EntityTypeMapping TypeName="UTOURDBModel.webpages_Roles">
+              <MappingFragment StoreEntitySet="webpages_Roles">
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="UTOURDBModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UploadedPhotos">
+            <EntityTypeMapping TypeName="UTOURDBModel.UploadedPhoto">
+              <MappingFragment StoreEntitySet="UploadedPhotos">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="hotspotID" ColumnName="hotspotID" />
+                <ScalarProperty Name="TouristID" ColumnName="TouristID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="layerhotspots">
+            <EntityTypeMapping TypeName="UTOURDBModel.layerhotspot">
+              <MappingFragment StoreEntitySet="layerhotspots">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="Long_Description" ColumnName="Long_Description" />
+                <ScalarProperty Name="Monument_Audio" ColumnName="Monument_Audio" />
+                <ScalarProperty Name="poiType" ColumnName="poiType" />
+                <ScalarProperty Name="showBiwOnClick" ColumnName="showBiwOnClick" />
+                <ScalarProperty Name="showSmallBiw" ColumnName="showSmallBiw" />
+                <ScalarProperty Name="doNotIndex" ColumnName="doNotIndex" />
+                <ScalarProperty Name="alt" ColumnName="alt" />
+                <ScalarProperty Name="biwStyle" ColumnName="biwStyle" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="imageurl" ColumnName="imageurl" />
+                <ScalarProperty Name="lon" ColumnName="lon" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="footnote" ColumnName="footnote" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="UTourModel">
+        <EntityTypeShape EntityType="UTOURDBModel.Admin_Users" Width="1.5" PointX="0.25872414943702715" PointY="20.642648319081704" />
+        <EntityTypeShape EntityType="UTOURDBModel.city" Width="1.5" PointX="6.7969357719630636" PointY="28.572220487786559" />
+        <EntityTypeShape EntityType="UTOURDBModel.LayerTable" Width="1.5" PointX="2.2760415013302313" PointY="22.658201600731445" />
+        <EntityTypeShape EntityType="UTOURDBModel.Monument_Ratings" Width="1.5" PointX="3.9774931687756876" PointY="27.277029467409957" />
+        <EntityTypeShape EntityType="UTOURDBModel.Monuments_Photos" Width="1.5" PointX="8.5649141299374918" PointY="16.061771906941093" />
+        <EntityTypeShape EntityType="UTOURDBModel.Monuments_Reviews" Width="1.5" PointX="11.915726490279532" PointY="0.52815133357800137" />
+        <EntityTypeShape EntityType="UTOURDBModel.Monuments_Videos" Width="1.5" PointX="2.5825386096642067" PointY="11.511674752231535" />
+        <EntityTypeShape EntityType="UTOURDBModel.sysdiagram" Width="1.5" PointX="7.25623268413182" PointY="4.5296958109967855" />
+        <EntityTypeShape EntityType="UTOURDBModel.Tourist" Width="1.5" PointX="1.9440557015799245" PointY="8.5883817116675818" />
+        <EntityTypeShape EntityType="UTOURDBModel.webpages_Membership" Width="1.5" PointX="10.564183405863208" PointY="1.7119021721705339" />
+        <EntityTypeShape EntityType="UTOURDBModel.webpages_OAuthMembership" Width="1.5" PointX="0.97022227988123066" PointY="28.287005527078641" />
+        <EntityTypeShape EntityType="UTOURDBModel.webpages_Roles" Width="1.5" PointX="9.4825599554379281" PointY="24.593414437302116" />
+        <EntityTypeShape EntityType="UTOURDBModel.UserProfile" Width="1.5" PointX="9.1288171322684821" PointY="31.096780627545332" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monument_Ratings_Tourists" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monuments_Reviews_Tourists" />
+        <EntityTypeShape EntityType="UTOURDBModel.UploadedPhoto" Width="1.5" PointX="0.1642652918418242" PointY="8.32618309945156" />
+        <AssociationConnector Association="UTOURDBModel.FK_UploadedPhotos_Tourists" />
+        <EntityTypeShape EntityType="UTOURDBModel.layerhotspot" Width="1.5" PointX="3.46128702324875" PointY="29.799682571459414" />
+        <AssociationConnector Association="UTOURDBModel.FK_layerhotspots_city" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monument_Ratings_layerhotspots" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monuments_Photos_layerhotspots" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monuments_Reviews_layerhotspots" />
+        <AssociationConnector Association="UTOURDBModel.FK_Monuments_Videos_layerhotspots" />
+        <AssociationConnector Association="UTOURDBModel.FK_UploadedPhotos_layerhotspots" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

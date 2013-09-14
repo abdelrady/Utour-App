@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="603e7d13-dc76-495a-ab13-1807f0cd6553" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="3d4fac03-a53f-451b-b0bd-ecdadcde416c" name="Comment2">
+      <body>AppFabric Hosting
+10.0.55.57
+10.0.55.58</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="8168620d-2915-49c4-bbb6-590ba0bae44b" />
+        </linkFromCommentToLayerElement>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="cc468991-c5b1-4d21-bb8a-e9976ebb297f" />
+        </linkFromCommentToLayerElement>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="b9807cff-5396-4377-9247-0374e4aa6c95" />
+        </linkFromCommentToLayerElement>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="5addf1b2-ed37-4b8c-a89c-646be50cf6e1" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="12a19170-0198-4036-9380-a0aa075c59ad" name="Comment1">
+      <body>Hosted With BM
+EGY-SPPSVR
+</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="9dceabb0-be8e-4391-90bd-7973ca439593" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="021d953f-cdf6-41d1-9bc8-eb67e1ca82d9" name="Comment3">
+      <body>Web Hosting
+10.0.55.57
+10.0.55.58</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="71f7a1f5-1558-44b5-832c-109405b4f49b" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="04339475-ba56-4ee3-9548-3e4fc9f78a3d" name="Comment4">
+      <body>DataBase
+EFGSQLDB
+10.0.55.21</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="c456bc44-cdef-4fd2-8707-7f947ff3050b" name="Presentation Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b8142e14-5246-4f64-af96-39bac9d9f36f" direction="Forward">
+          <layerMoniker Id="454a5e13-011b-41a4-88d9-d29adf453eed" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="bac086b7-e27f-4bf6-bd08-894074077075" name="WPF">
+          <childLayers>
+            <layer Id="9dceabb0-be8e-4391-90bd-7973ca439593" name="M-V-VM" />
+          </childLayers>
+        </layer>
+        <layer Id="44194f80-86dc-4282-a02a-bb0c1003d5d8" name="WinForms">
+          <childLayers>
+            <layer Id="fc332a13-7edc-4b2a-8b3c-a5ade954c678" name="MVP" />
+          </childLayers>
+        </layer>
+        <layer Id="c2d7561d-b1e7-48e3-9061-0516b1734f54" name="OBA">
+          <childLayers>
+            <layer Id="591fa518-15df-4d95-9510-a30f7f4c2133" name="MVP" />
+          </childLayers>
+        </layer>
+        <layer Id="6e8740a7-31cf-46a2-8903-74ccaf22831a" name="Silverlight">
+          <childLayers>
+            <layer Id="71f7a1f5-1558-44b5-832c-109405b4f49b" name="M-V-VM" />
+          </childLayers>
+        </layer>
+        <layer Id="bd342cf8-460e-49e7-8e6d-4fecd17ba7b0" name="ASP.NET">
+          <childLayers>
+            <layer Id="95c37ac4-7740-43cd-b7be-62b718ed843c" name="MVC" />
+          </childLayers>
+        </layer>
+        <layer Id="92ef472c-fb5e-4240-b34e-4750f4254247" name="Phone SL">
+          <childLayers>
+            <layer Id="48a46931-7d7c-48a0-8967-659136748c64" name="M-V-VM" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="8168620d-2915-49c4-bbb6-590ba0bae44b" name="AppFabric (ATM Web Service)">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="4915021b-a7f5-4370-8248-281710c93305" direction="Forward">
+          <layerMoniker Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="454a5e13-011b-41a4-88d9-d29adf453eed" name="Distributed Services">
+          <childLayers>
+            <layer Id="114f6b62-fadb-494c-a732-0c68811ec907" name="ATM Card Management Service">
+              <childLayers>
+                <layer Id="61074236-3b78-4dfe-964b-02d67ac9e8c5" name="WCF Services">
+                  <dependencyToLayers>
+                    <dependencyFromLayerToLayer Id="3585ef86-2930-420c-8d21-b19002870268" direction="Forward">
+                      <layerMoniker Id="218bef55-4567-4d62-843e-7373e03b3201" />
+                    </dependencyFromLayerToLayer>
+                  </dependencyToLayers>
+                </layer>
+              </childLayers>
+            </layer>
+            <layer Id="b58547e1-5213-4001-b020-59cbbf69efff" name="ATM Transaction Service">
+              <dependencyToLayers>
+                <dependencyFromLayerToLayer Id="bb465142-3f64-4fab-b4d2-cee1905cceaf" direction="Forward">
+                  <layerMoniker Id="9e576966-a12f-42ce-9271-4ae9787ab2c7" />
+                </dependencyFromLayerToLayer>
+                <dependencyFromLayerToLayer Id="0b251032-ab5e-45e7-97a9-a74921b856d0" direction="Forward">
+                  <layerMoniker Id="37934290-c26f-4c6a-a6ef-acafd7e2956a" />
+                </dependencyFromLayerToLayer>
+              </dependencyToLayers>
+              <childLayers>
+                <layer Id="e8081557-03a1-4867-95ba-d8d2ea2a4365" name="WCF Services" />
+              </childLayers>
+            </layer>
+            <layer Id="82c8b42e-c019-496c-8df9-e0bb69d63eef" name="ATM Periodical Events">
+              <childLayers>
+                <layer Id="24819b4c-a500-4389-939d-ee56c5d5cd97" name="WCF Services" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="bcf80812-a11d-4de6-b488-98b94cf1d66c" name="Application Layer">
+          <childLayers>
+            <layer Id="57606579-2889-49b2-940d-3aa69c5820a9" name="Application Core" />
+            <layer Id="27edb3dc-031f-496a-b9ee-73666ddf5414" name="ATM Card Management Module">
+              <childLayers>
+                <layer Id="6caea71c-b5d9-4fc1-a34f-9ff4fa185a16" name="Application Services" />
+              </childLayers>
+            </layer>
+            <layer Id="2d1a241f-3a17-417c-878f-6fc060d1410a" name="ATM Lookups Module">
+              <childLayers>
+                <layer Id="1e118c85-d24f-484f-9e79-7bad7602abe9" name="Application Services" />
+              </childLayers>
+            </layer>
+            <layer Id="de929c7b-c11d-4011-8493-31b512060579" name="ATM Transaction Module">
+              <childLayers>
+                <layer Id="4b17955b-a17d-462d-9d6d-6fa8446760cb" name="Application Services &amp; Workflows" />
+              </childLayers>
+            </layer>
+            <layer Id="d2aa2d1a-6320-4abc-8269-7480f66d73b0" name="General Data Module">
+              <childLayers>
+                <layer Id="b76060bc-8a1e-4f21-ab1b-ba46f7b20ad8" name="Application Services" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="c10af34b-a3f0-4aeb-ab98-c553f88c9f80" name="Domain Layer">
+          <childLayers>
+            <layer Id="ed6f7f2b-6dff-452e-a5b8-4c46ce275682" name="Domain Core" />
+            <layer Id="f674b937-3540-450b-a8b0-e24b0432a282" name="ATM Module">
+              <childLayers>
+                <layer Id="92130b96-f903-468a-83b5-44625208992e" name="Domain&#xD;&#xA;Entities&#xD;&#xA;(POCO / IPOCO)&#xD;&#xA;STE&#xD;&#xA;DTO" />
+                <layer Id="5dce72c1-131b-4016-8a28-bfa432925ed7" name="Domain Services (Domain Logic)" />
+                <layer Id="1034e021-ab80-45bb-9859-bf9e04ae8143" name="&#xD;&#xA;Aggregates' Specifications &amp; Repositories' Contracts" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+        <layer Id="84d4e138-5ab5-4cd2-a3e7-27480bb9ff87" name="Infrastructure Data Persistence Layer">
+          <childLayers>
+            <layer Id="c9261376-f0be-4189-8122-71431561337a" name="Data Persistence Core" />
+            <layer Id="454f2395-58f8-4148-af3f-1456b7f423d6" name="ATM Module">
+              <childLayers>
+                <layer Id="37843ebc-ebf5-4d0f-9c9e-088e19802c6f" name="Repositories" />
+                <layer Id="e3712484-b616-4344-ac89-8064e7e819b0" name="Model" />
+                <layer Id="97663a9d-7abf-484c-bf1b-a8313db76370" name="Context" />
+              </childLayers>
+            </layer>
+            <layer Id="69ccf144-5b82-40d5-9862-5a86455a3a98" name="Entity Framework" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" name="Layer1" />
+    <layer Id="cc468991-c5b1-4d21-bb8a-e9976ebb297f" name="Cash Service">
+      <childLayers>
+        <layer Id="ff3c5e8f-faa1-477f-ab78-5d2ec0abbf19" name="Distributed Services">
+          <childLayers>
+            <layer Id="9e576966-a12f-42ce-9271-4ae9787ab2c7" name="Cash Service Service">
+              <childLayers>
+                <layer Id="057c3b1c-b721-49cb-aa82-9b4f2de7fae1" name="WCF Services">
+                  <dependencyToLayers>
+                    <dependencyFromLayerToLayer Id="0977984b-db6a-4ece-9183-0580775e9955" direction="Forward">
+                      <layerMoniker Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" />
+                    </dependencyFromLayerToLayer>
+                  </dependencyToLayers>
+                </layer>
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="b9807cff-5396-4377-9247-0374e4aa6c95" name="Jounral Service">
+      <childLayers>
+        <layer Id="7f638ccb-e814-421f-8eda-2536eb556e16" name="Distributed Services">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="e47ee9ca-dedb-440b-bb26-5510ea5799cd" direction="Forward">
+              <layerMoniker Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="37934290-c26f-4c6a-a6ef-acafd7e2956a" name="Jounral Service">
+              <childLayers>
+                <layer Id="0607d609-3e8e-4ded-a43f-0ba0e917cb64" name="WCF Services" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="5addf1b2-ed37-4b8c-a89c-646be50cf6e1" name="AccNodes Service">
+      <childLayers>
+        <layer Id="d34c8cf1-2bd4-4836-b33f-9935eaaead9f" name="Distributed Services">
+          <childLayers>
+            <layer Id="218bef55-4567-4d62-843e-7373e03b3201" name="AccNode Service">
+              <childLayers>
+                <layer Id="94c8dd0c-5cc7-4697-b3ca-e1adf657c033" name="WCF Services">
+                  <dependencyToLayers>
+                    <dependencyFromLayerToLayer Id="a466958c-67b2-4b61-bc9f-1b2b40ec8604" direction="Forward">
+                      <layerMoniker Id="17b1eb07-2a85-4c80-ba74-f9919bcc0b45" />
+                    </dependencyFromLayerToLayer>
+                  </dependencyToLayers>
+                </layer>
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

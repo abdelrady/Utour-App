@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="HttpEndpoint" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:54131/LoginRegRevRateMgmtService.svc"
+                binding="basicHttpBinding" bindingConfiguration="HttpEndpoint"
+                contract="LoginRegRevRateMgmtServiceProxy.ILoginRegRevRateMgmtService"
+                name="HttpEndpoint" />
+        </client>
+    </system.serviceModel>
+</configuration>

@@ -1,0 +1,599 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+* {
+	margin: 0 0px 0 0;
+	padding: 0;
+}
+
+body 
+{
+    border-width: 1px 33px 2px 34px;
+   -webkit-border-image: url(images/C-_Users_Rana_Desktop_Utour3_02.gif) 1 33 2 34 round;
+	/*background: #F4E7DB url(images/img01.gif) repeat-x;*/
+	font: normal small Georgia, "Times New Roman", Times, serif;
+	color: #C7894C;  /*color: #A4896D;clientID password*/
+	background: #44576e repeat;    /* My Color*/
+	margin-right:0px;
+}
+
+h1, h2, h3 {
+	color:#C7894C;  /*#B43939;  client account*/
+}
+
+h2 {
+	margin-bottom: .8em;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+h3 {
+	margin-bottom: 1em;
+	font-size: small;
+}
+
+p, blockquote, ul, ol {
+	margin-bottom: 1.4em;
+	line-height: 1.8em;
+}
+
+p {
+}
+
+blockquote {
+	margin-left: 3em;
+	margin-right: 3em;
+	padding: 1em 1em 0 1em;
+	background: #FAF3ED;
+	border: 1px dotted #C7894C;
+	font-style: italic;
+	color: #C7894C;
+}
+
+ul {
+	margin-left: 3em;
+}
+
+ul li {
+}
+
+ol {
+	margin-left: 3em;
+}
+
+ol li {
+}
+
+a {
+	text-decoration: none;
+	color:Orange; /*color: #B43939;*/ 
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img {
+}
+
+.hr hr {
+	display: none;
+}
+
+.hr {
+	clear: left;
+	height: 70px;
+	background: url(images/img04.gif) no-repeat center;
+}
+
+/* Boxed Style */
+
+.boxed {
+	margin-bottom: 20px;
+	padding-bottom: 16px;
+	/*background: url(images/img06.gif) no-repeat center bottom;*/
+}
+
+.boxed .title {
+	/*background: url(images/img05.gif) no-repeat right;*/
+	font-size: 1.6em;
+}
+
+.boxed .content {
+	/* border-bottom: 1px dotted #C7894C;*/
+	padding-bottom: 16px;
+	border-bottom: 4px solid #C7894C;
+}
+
+
+/* Logo */
+
+#logo {
+	height: 67px;
+	padding: 20px 40px;
+	background: #F4E7DB url(images/img01.gif) repeat-x;
+}
+
+#logo h1 {
+	float: left;
+	font-size: 2.6em;
+}
+
+#logo h2 {
+	float: left;
+	padding: .75em 0 0 .4em;
+	font-size: 1.4em;
+	font-style: italic;
+}
+
+#logo a {
+	color: #F4E7DB;
+}
+
+/* Content */
+
+#content {
+}
+
+/* Content > Main */
+
+#main {
+	margin: -13px 260px 0 20px;
+	padding: 15px;
+	background: #FFFFFF;
+	border: 5px solid #C7894C;
+}
+
+#extra {
+	height: 31px;
+	margin: 0 260px 0 20px;
+	background: url(images/img02.gif) repeat-x;
+}
+
+/* Content > Main > Welcome */
+
+#welcome {
+}
+
+/* Content > Main > Example */
+
+#example {
+}
+
+/* Content > Sidebar */
+
+#sidebar {
+	float: right;
+	width: 220px;
+	padding: 60px 20px 0 0;
+	font-weight: bold;
+}
+
+/* Content > Sidebar > Login */
+
+#login {
+}
+
+#login form {
+}
+
+#login fieldset {
+	border: none;
+}
+
+#login legend {
+	display: none;
+}
+
+#login label {
+	font-size: x-small;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#login input {
+	margin-bottom: 5px;
+	padding: 2px 5px;
+	border: 1px solid #C7894C;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#inputtext1, #inputtext2 {
+	background:#FFFFFF;
+}
+
+#txtKeyword,#dropCategory,#dropCity
+{
+    margin-bottom: 7px;
+	padding: 2px 5px;
+	border: 1px solid #C7894C;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#inputsubmit1 
+{
+    background: #C7894C; /*background: #B43939;     lon el button */
+	color: #FFFFFF;  /*lon el klam 3la button */
+	margin-top: 5px;
+
+}
+
+#btnSearch
+{
+    background: #C7894C; 
+	color: #FFFFFF; 
+	margin-bottom: 5px;
+	padding: 2px 5px;
+	border: 1px solid #C7894C;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#Search 
+{
+ border-bottom: 4px solid #C7894C;   
+}
+/* Content > Sidebar > Menu */
+
+#menu {
+	margin-bottom: 30px;
+	border-bottom: 4px solid #C7894C;
+}
+
+#menu ul {
+	margin: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	padding: 10px;
+	border-top: 1px solid #C7894C;
+	font-weight: bold;
+	color:#C7894C;
+}
+
+#menu a:hover, #menu .highlight a {
+	background: #C7894C;  /*Menu Color*/
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Content > Sidebar > Updates*/
+
+#updates {
+}
+
+#updates ul {
+	margin: 0;
+	list-style: none;
+}
+
+#updates h3 {
+	margin: 0;
+	font-size: x-small;
+}
+
+#updates p {
+	margin-bottom: 1.4em;
+	font-size: smaller;
+	line-height: normal;
+}
+
+/* Content > Sidebar > Partners*/
+
+#partners {
+}
+
+#partners .content {
+	padding: 10px 0;
+}
+
+#partners ul {
+	margin: 0;
+	border-bottom: 1px solid #D1BC5C;
+	list-style: none;
+	line-height: normal;
+}
+
+#partners li {
+	padding: 10px;
+	border-top: 1px solid #D1BC5C;
+}
+
+/* Footer */
+
+#footer {
+	clear: both;
+	padding: 20px 40px 40px 40px;
+	background: #734415;
+}
+
+#footer p {
+	margin: 0;
+	font-size: x-small;
+	color: #C7894C;
+}
+
+#footer a {
+	text-decoration: underline;
+	color: #C7894C;
+}
+
+#footer a:hover {
+	text-decoration: none;
+	color: #F4E7DB;
+}
+
+#FootBorder 
+{
+    background-image:url(images/C-_Users_Rana_Desktop_Utour3_05.gif);
+    height:35px;
+    position:inherit;		
+} 
+
+/* Footer > Legal */
+
+#legal {
+}
+
+/* Footer > Links */
+
+#links {
+}
+
+/*/////////////////////////////////////*/
+
+#UpperBorder {
+	/*background-image:url(images/New2.png);*/
+	background-image:url(images/C-_Users_Rana_Desktop_Utour3_05.gif);
+	height: 35px;
+	position:inherit;
+}
+
+/****************************Contact Us *******************************************/
+
+.mainbar h2 {
+	margin:0 0 8px;
+	padding:0;
+}
+.mainbar div.img {
+	padding:12px 0;
+	float:left;
+}
+.mainbar img {
+}
+.mainbar img.fl {
+	margin:0;
+	border:none;
+	width:970px;
+}
+.mainbar .article {
+	margin:0 0 16px;
+	padding:0 20px 30px;
+}
+.mainbar .post_content {
+}
+.mainbar .post_content strong {
+	color:#585757;
+}
+
+.sidebar {
+	padding:0;
+	float:left;
+	width:260px;
+}
+.sidebar .gadget {
+	margin:0 0 16px;
+	padding:0 20px 16px;
+}
+.sidebar h2 {
+	margin:0 0 16px;
+	padding:0;
+}
+ul.sb_menu, ul.ex_menu {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#959595;
+}
+ul.sb_menu li, ul.ex_menu  {
+	margin:0;
+}
+ul.sb_menu li, ul.ex_menu li {
+	padding:8px 0;
+	width:220px;
+}
+ul.sb_menu li a {
+	color:#585757;
+	text-decoration:none;
+	margin-left:0;
+	padding:4px 8px;
+}
+ul.ex_menu li a {
+	font-weight:bold;
+	color:#585757;
+	text-decoration:none;
+}
+ul.sb_menu li a:hover, ul.ex_menu li a:hover {
+	color:#c26a03;
+	font-weight:bold;
+	text-decoration:none;
+	background:#fed63a;
+}
+
+
+p.spec {
+	padding:0 0 16px;
+}
+p.infopost {
+	margin:0;
+	padding:6px 12px;
+	text-transform:none;
+	color:#fff;
+	background:#747372;
+}
+p.infopost a {
+	padding:0 2px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#fed63a;
+}
+p.infopost a:hover {
+	text-decoration:underline;
+}
+p.infopost span.date {
+	color:#fed63a;
+}
+.article a.com {
+	margin:-6px -12px -6px 0;
+	padding:6px 20px;
+	float:right;
+	font-weight:normal;
+	text-decoration:none;
+	text-align:center;
+	color:#c26a03;
+	font-size:22px;
+	background:#fed63a;
+}
+.article a.com:hover {
+	text-decoration:none;
+}
+.article a.com span {
+}
+/*
+.post_content a.rm {
+	display:block;
+	float:left;
+	margin:0 0 16px;
+	padding:6px 20px;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+	text-transform:none;
+	color:#676767;
+	text-decoration:none;
+	text-align:justify;
+	background:#fed63a;
+}
+.content p.pages {
+	margin:0;
+	padding:24px 20px 0;
+	height:60px;
+	font-size:11px;
+	line-height:16px;
+	text-align:left;
+}
+.content p.pages span, .content p.pages a {
+	display:block;
+	float:left;
+	margin:0 2px 0 0;
+	padding:7px 0;
+	width:30px;
+	text-decoration:none;
+	text-align:center;
+}
+.content p.pages span, .content p.pages a:hover {
+	color:#c26a03;
+	background:#fed63a;
+}
+.content p.pages a {
+	color:#7e7e7e;
+	border:none;
+}
+.content p.pages small {
+	padding:8px 0 0;
+	font-size:12px;
+	float:right;
+	line-height:24px;
+}*/
+.mainbar .comment {
+	margin:0;
+	padding:16px 0 0 0;
+}
+.mainbar .comment img.userpic {
+	border:1px solid #dedede;
+	margin:10px 16px 0 0;
+	padding:0;
+	float:left;
+}
+ol {
+	list-style:none;
+}
+
+ol li label {
+	display:block;
+	margin:0;
+	padding:16px 0 0 0;
+}
+/*ol li textbox {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:0;
+	padding:5px 2px;
+	height:16px;
+	background-color:#fff;
+}*/
+
+#txtemail,#txtname
+{
+    width:480px;
+	border:1px solid #c0c0c0;
+	margin:0;
+	padding:5px 2px;
+	height:16px;
+	background-color:#fff;
+}
+	
+#txtmessage {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:0;
+	padding:2px;
+	background-color:#fff;
+}
+
+/*ol li .send {
+	margin:16px 0 0 0;*/
+}
+
+/*///////////////////////////////////*/
+
+.Test
+{
+    padding-left:50px;  
+}
+
+
+.Test1
+{
+    padding-bottom:20px; 
+    text-align:justify;  
+}
+
+/*///////////////////////////////////////////*
+@charset "utf-8";
+/* CSS Document 
+a, a:visited{color:#000; font-weight:bold; text-decoration:none;}
+ul.navigation{list-style:none; font: 0.75em/1.5em normal Tahoma, Verdana, Geneva, sans-serif;}
+ul.navigation li{ background:#ececec; margin:1px;padding:5px 15px; display:block; float:left;}
+ul.navigation li.highlight{ background:#666;}
+ul.navigation li.highlight a{ color:#f5f5f5; cursor:default;}*/
+
+.ViewMR
+{
+    padding-left:100px; 
+}
+
+.ViewMRLabel
+{
+    
+}

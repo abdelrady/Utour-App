@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
+  <xs:import schemaLocation="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Domain.DataContracts.DTOs" />
+  <xs:import schemaLocation="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DistributedServices.Contracts" />
+  <xs:import schemaLocation="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.CommonCotracts" />
+  <xs:element name="RegisterUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="xList" nillable="true" type="q1:UserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogIn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Domain.DataContracts.DTOs" minOccurs="0" name="userAuthInfo" nillable="true" type="q2:UserAuthInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogInResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DistributedServices.Contracts" minOccurs="0" name="LogInResult" nillable="true" type="q3:LogInResult" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Domain.DataContracts.DTOs" minOccurs="0" name="userAuthInfo" nillable="true" type="q4:UserAuthInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Rate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DistributedServices.Contracts" minOccurs="0" name="rateInfo" nillable="true" type="q5:RateInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.CommonCotracts" minOccurs="0" name="RateResult" nillable="true" type="q6:RateResultReview" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DistributedServices.Contracts" minOccurs="0" name="reviewInfo" nillable="true" type="q7:ReviewInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PostReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.CommonCotracts" minOccurs="0" name="PostReviewResult" nillable="true" type="q8:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

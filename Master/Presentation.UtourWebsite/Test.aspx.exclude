@@ -1,0 +1,107 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Test.aspx.cs" Inherits="Test" %>
+
+<%@ Register src="UserControl/Login.ascx" tagname="Login" tagprefix="uc1" %>
+
+<%@ Register src="UserControl/TestWebUserControl.ascx" tagname="TestWebUserControl" tagprefix="uc2" %>
+
+<%@ Register src="UserControl/LoginUserControl.ascx" tagname="LoginUserControl" tagprefix="uc3" %>
+
+<%@ Register src="UserControl/WebUserControlNew.ascx" tagname="WebUserControlNew" tagprefix="uc4" %>
+
+<%@ Register src="UserControl/SearchUserControl.ascx" tagname="SearchUserControl" tagprefix="uc5" %>
+
+<%@ Register src="UserControl/FinalLogin.ascx" tagname="FinalLogin" tagprefix="uc6" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .post_content
+        {
+            width: 1054px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+   
+            <%--<uc4:WebUserControlNew ID="WebUserControlNew1" runat="server" />--%>
+            <div style="height: 87px; position:relative; left:1250px; top:50px;">
+            <uc6:FinalLogin ID="FinalLogin1" runat="server" />
+            </div>
+            
+        <br />
+        <div style="position:relative; top:200px; left:1250px;">
+            <uc5:SearchUserControl ID="SearchUserControl1" runat="server" />
+         </div>   
+            <p>
+        <br />
+    </p>
+</asp:Content>
+
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+  
+    <div>
+
+    <div class="article">
+          <h2><span>Guide Yourself</span></h2>
+          <div class="clr"></div>
+          <div class="img"><img src="images/Home1.png" height="221" ; alt="" class="fl" /></div>
+          <div class="post_content">
+              <br />
+              <br />
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.&nbsp; Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.
+            Aenean consequat porttitor adipiscing. Nam pellentesque justo ut tortor congue lobortis. Donec venenatis sagittis fringilla.</strong> Etiam nec libero magna, et dictum velit. Proin mauris mauris, mattis eu elementum eget, commodo in nulla. Mauris posuere venenatis pretium. Maecenas a dui sed lorem aliquam dictum. Nunc urna leo, imperdiet eu bibendum ac, pretium ac massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Quisque condimentum luctus ullamcorper.
+            <p class="spec"><a href="#" class="rm">Read more &raquo;</a></p>
+          </div>
+          <div class="clr"></div>
+        </div>
+    <div id="Div1">
+	<%--<div id="sidebar">
+				<div id="login" class="boxed">
+			<h3 class="title">User Account</h3>
+			<div class="content">
+				<form id="form1" method="post" action="#">
+					<fieldset>
+					<legend>Sign-In</legend>
+					<label for="inputtext1">Client ID:</label>
+					<input id="inputtext1" type="text" name="inputtext1" value="" />
+					<label for="inputtext2">Password:</label>
+					<input id="inputtext2" type="password" name="inputtext2" value="" />
+					<input id="inputsubmit1" type="submit" name="inputsubmit1" value="Sign In" onclick="return inputsubmit1_onclick()" />
+					<p><a href="#">Forgot your password?</a></p>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+        <div id="Find" >
+        <form id="form3" method="post" action="#">
+					<fieldset style="width: 160px">
+					<label for="inputtext1">Select Destination:</label>
+                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="109px" 
+                            style="margin-right: 33px">
+                        <asp:ListItem>Cairo</asp:ListItem>
+                        <asp:ListItem>Luxor</asp:ListItem>
+                        <asp:ListItem>Aswan</asp:ListItem>
+                        <asp:ListItem>Alexandria</asp:ListItem>
+                    </asp:DropDownList>
+					<label for="inputtext2">Select Categories:</label>
+                    <asp:DropDownList ID="DropDownList2" runat="server">
+                        <asp:ListItem>Ancient Egypt</asp:ListItem>
+                        <asp:ListItem>Islamic Egypt</asp:ListItem>
+                        <asp:ListItem>Modern Egypt</asp:ListItem>
+                        <asp:ListItem>Jewish Egypt</asp:ListItem>
+                    </asp:DropDownList>
+					<input id="Submit1" type="submit" name="inputsubmit1" value="Find" onclick="return inputsubmit1_onclick()" />
+					</fieldset>
+				</form>
+        </div>
+
+
+			</div>--%>
+	<div id="Div2"></div>
+
+    </div>
+
+    </div>
+  
+</asp:Content>

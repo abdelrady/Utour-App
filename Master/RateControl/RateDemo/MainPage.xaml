@@ -1,0 +1,42 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="RateDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:J4ni.Controls;assembly=RateControl"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="RateControl by Jani Nevalainen" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Rating" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <local:RateControl x:Name="test" Height="92" VerticalAlignment="Top"
+                               Scale="5" Margin="28,0,22,0" />
+            <TextBlock x:Name="lbl" Text="Rating databinded:" Width="176" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,120,0,0"/>
+            <TextBlock x:Name="rate" Text="{Binding ElementName=test, Path=Rating}" Width="70" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="207,120,0,0"/>
+            <TextBox x:Name="ratingBox" Width="170" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="191,176,0,0" TextChanged="OnChanged" />
+            <TextBlock HorizontalAlignment="Left" Margin="6,196,0,0" Name="textBlock1" Text="Rating property set:" VerticalAlignment="Top" Width="176" />
+        </Grid>
+    </Grid>
+ 
+ 
+</phone:PhoneApplicationPage>

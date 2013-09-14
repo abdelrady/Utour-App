@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/NewMasterPage.master" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder> 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%;">
+        <tr>
+            <td valign="top">
+               <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" 
+                    DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                    ForeColor="#284E98" StaticSubMenuIndent="10px">
+                   <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                   <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                   <DynamicMenuStyle BackColor="#B5C7DE" />
+                   <DynamicSelectedStyle BackColor="#507CD1" />
+        <Items>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_layerhotspots.aspx" 
+                Text="Manage Layerhostspots" Value="Manage Layerhostspots"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Tourists.aspx" Text="Manage Tourists" 
+                Value="Manage Tourists"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Users.aspx" Text="Manage Admins" 
+                Value="Manage Admins"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_City.aspx" Text="Manage Cities" 
+                Value="Manage Cities"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Monument_Ratings.aspx" 
+                Text="Manage Monument Ratings" Value="Manage Monument Ratings">
+            </asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Monuments_Photos.aspx" 
+                Text="Manage Monuments Photos" Value="Manage Monuments Photos">
+            </asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Monuments_Reviews.aspx" 
+                Text="Manage Monuments Reviews" Value="New Item"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_Monuments_Videos.aspx" 
+                Text="Manage Monuments Videos" Value="Manage Monuments Videos">
+            </asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/Admin_UploadedPhotos.aspx" 
+                Text="Manage UploadedPhotos" Value="Manage UploadedPhotos"></asp:MenuItem>
+        </Items>
+                   <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                   <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                   <StaticSelectedStyle BackColor="#507CD1" />
+    </asp:Menu>
+            </td>
+            <td>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder> 
+            </td>
+        </tr>
+                
+    </table>
+</asp:Content>
+
+

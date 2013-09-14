@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DistributedServices.UTourService.LoginRegRevRateMgmtService" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="3" Width="4.5" />
+    <Members>
+      <Method Name="LoginRegRevRateMgmtService" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>UAACAAAAAAAAAAAAAAAgAAABQAAABBAAAAAAAAAAAAA=</HashCode>
+      <FileName>LoginRegRevRateMgmtService.svc.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ILoginRegRevRateMgmtService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DistributedServices.UTourService.PhotoUploadService" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="1.25" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>PhotoUpload.svc.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IPhotoUpload" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="DistributedServices.Contracts.ILoginRegRevRateMgmtService">
+    <Position X="8.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DistributedServices.Contracts.IPhotoUpload">
+    <Position X="0.75" Y="3.5" Width="5.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

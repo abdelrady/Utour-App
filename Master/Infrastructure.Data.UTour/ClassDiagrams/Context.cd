@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Context.UTOURDBEntities" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.75" Width="5.5" />
+    <Members>
+      <Field Name="_admin_Users" Hidden="true" />
+      <Field Name="_cities" Hidden="true" />
+      <Field Name="_layerhotspots" Hidden="true" />
+      <Field Name="_monument_Ratings" Hidden="true" />
+      <Field Name="_monuments_Photos" Hidden="true" />
+      <Field Name="_monuments_Reviews" Hidden="true" />
+      <Field Name="_monuments_Videos" Hidden="true" />
+      <Field Name="_sysdiagrams" Hidden="true" />
+      <Field Name="_tourists" Hidden="true" />
+      <Field Name="_uploadedPhotos" Hidden="true" />
+      <Field Name="ConnectionString" Hidden="true" />
+      <Field Name="ContainerName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AJACCMgIAAEAgSCAiEgAAGQgAIACACAAADAAFhAAAAA=</HashCode>
+      <FileName>Context\UTourEntities.Context.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IUTourUnitOfWork" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ITI.Nlayerd.Infrastructure.Data.UTour.UnitOfWork.IUTourUnitOfWork">
+    <Position X="7.25" Y="7.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAiAAAACAAAAACAAAAABAAEhAAAAA=</HashCode>
+      <FileName>UnitOfWork\IUTourUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Data.Core.IQueryableUnitOfWork">
+    <Position X="6.75" Y="5.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.ISQL">
+    <Position X="4.75" Y="3.25" Width="5.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IUnitOfWork">
+    <Position X="10" Y="5.25" Width="3" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

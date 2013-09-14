@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" />
+  <xs:complexType name="LayerInfo">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" minOccurs="0" name="actions" nillable="true" type="q1:ArrayOfActions" />
+      <xs:element minOccurs="0" name="biwStyle" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" minOccurs="0" name="deletedHotspots" nillable="true" type="q2:ArrayOfHotSpots" />
+      <xs:element minOccurs="0" name="errorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="errorString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullRefresh" type="xs:boolean" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" minOccurs="0" name="hotspots" nillable="true" type="q3:ArrayOfHotSpots" />
+      <xs:element minOccurs="0" name="layer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="morePages" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nextPageKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="radius" type="xs:int" />
+      <xs:element minOccurs="0" name="refreshDistance" type="xs:int" />
+      <xs:element minOccurs="0" name="refreshInterval" type="xs:int" />
+      <xs:element minOccurs="0" name="showMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LayerInfo" nillable="true" type="tns:LayerInfo" />
+</xs:schema>

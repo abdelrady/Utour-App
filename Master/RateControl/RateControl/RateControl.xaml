@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="SR.MaskDemo.RatingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:converters="clr-namespace:SR.MaskDemo.IValueConverters"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}" Height="197" Width="401">
+    
+    
+    
+    <UserControl.Resources>
+        <converters:RaitingValueToWidthConverter x:Key="RaitingValueToWidthConverter" />
+        <sys:String x:Key="StarPath">F1 M 0,217.042L 227.5,217.042L 297.875,0L 367.542,217L 595.542,217L 410.208,353.667L 480.708,569.667L 297.208,436.667L 116.208,568.167L 185.708,352.667L 0,217.042 Z</sys:String>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        
+        <Path Name="star" Stretch="Uniform" Data="{StaticResource StarPath}" Fill="Black" Width="28" Height="28" HorizontalAlignment="Left" Margin="251,0,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width, Height"  />
+        <Path x:Name="star2" Stretch="Uniform" Data="{StaticResource StarPath}" Fill="Black" Width="28" Height="28" Margin="0,0.333,100,0" HorizontalAlignment="Right" VerticalAlignment="Top" />
+        <Path x:Name="star3" Stretch="Uniform" Data="{StaticResource StarPath}" Fill="Black" Width="28" Height="28" Margin="306,0.333,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Path x:Name="star4" Stretch="Uniform" Data="{StaticResource StarPath}" Fill="Black" Width="28" Height="28" Margin="0,0.333,40,0"  HorizontalAlignment="Right" VerticalAlignment="Top" />
+        <Path x:Name="star5" Stretch="Uniform" Data="{StaticResource StarPath}" Fill="Black" Width="28" Height="28" Margin="0,0.333,14,0" HorizontalAlignment="Right" VerticalAlignment="Top" />
+
+        <Rectangle x:Name="Mask"  VerticalAlignment="Top"
+                   Height="28" HorizontalAlignment="Right" Width="{Binding Value, 
+                   Converter={StaticResource RaitingValueToWidthConverter}}" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="#0033FF" Offset="0"/>
+                    <GradientStop Color="#3399FF" Offset="0.5"/>
+                    <GradientStop Color="Transparent" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        
+        <Path Name="border"  Stretch="Uniform" Data="{StaticResource StarPath}" StrokeThickness="2" Stroke="White" Width="30" Height="30" HorizontalAlignment="Left" Margin="249,0,0,0"  VerticalAlignment="Top" d:LayoutOverrides="Width, Height" MouseLeftButtonDown="border_MouseLeftButtonDown"   MouseMove="border_MouseMove"></Path>
+        <Path x:Name="border2"  Stretch="Uniform" Data="{StaticResource StarPath}" StrokeThickness="2" Stroke="White" Width="30" Height="30" Margin="280,0.333,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" MouseLeftButtonDown="border_MouseLeftButtonDown" MouseMove="border_MouseMove" />
+        <Path x:Name="border3"  Stretch="Uniform" Data="{StaticResource StarPath}" StrokeThickness="2" Stroke="White" Width="30" Height="30" Margin="304,0.333,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top" MouseLeftButtonDown="border_MouseLeftButtonDown" MouseMove="border_MouseMove" />
+        <Path x:Name="border4"  Stretch="Uniform" Data="{StaticResource StarPath}" StrokeThickness="2" Stroke="White" Width="30" Height="30" Margin="0,0.333,38,0" HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonDown="border_MouseLeftButtonDown" />
+        <Path x:Name="border5"  Stretch="Uniform" Data="{StaticResource StarPath}" StrokeThickness="2" Stroke="White" Width="30" Height="30" Margin="0,0.333,14,0"  HorizontalAlignment="Right" VerticalAlignment="Top" MouseLeftButtonDown="border_MouseLeftButtonDown" MouseMove="border_MouseMove" />
+
+        <!--Button Content="Random" Height="72" Margin="107,0,97,0" Name="btnRandom" VerticalAlignment="Bottom" Click="BtnRandomClick" /-->
+        <TextBlock Height="37" Margin="3,0,6,69" Name="textBlock1" Text="{Binding ValueFormatted}" VerticalAlignment="Bottom" TextAlignment="Center" />
+    </Grid>
+</UserControl>

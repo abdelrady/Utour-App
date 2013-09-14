@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ITI.Common.Utilities.Data.Core.ExtendedRepository&lt;TEntity&gt;">
+    <Position X="10.5" Y="4.25" Width="2.75" />
+    <InheritanceLine Type="ITI.Common.Utilities.Data.Core.Repository&lt;TEntity&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="10.25" Y="3.506" />
+        <Point X="10.25" Y="3.875" />
+        <Point X="10.625" Y="3.875" />
+        <Point X="10.625" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITI.Common.Utilities.Data.Core.Repository&lt;TEntity&gt;">
+    <Position X="9" Y="0.5" Width="2.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ITI.Nlayerd.Infrastructure.Data.UTour.Repositories.TouristRepository" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\TouristRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ITouristRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IExtendedRepository&lt;TEntity&gt;">
+    <Position X="1.25" Y="4" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="ITI.Common.Utilities.Domain.Core.IRepository&lt;TEntity&gt;">
+    <Position X="2.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Domain.Contracts.ITouristRepository">
+    <Position X="4.75" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

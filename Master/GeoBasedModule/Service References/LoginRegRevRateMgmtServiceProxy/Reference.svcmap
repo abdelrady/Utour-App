@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2cd383e1-0b57-4776-9240-be2b41009932" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54131/LoginRegRevRateMgmtService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="true.xsd" MetadataType="Schema" ID="92d9386a-d6dc-4b69-8448-0072e804d42e" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd0" />
+    <MetadataFile FileName="true1.xsd" MetadataType="Schema" ID="5458c694-101c-4494-9985-c67ad5616d13" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd4" />
+    <MetadataFile FileName="true2.xsd" MetadataType="Schema" ID="91a3e058-f4fc-44d6-82c0-cf6477e26f73" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd6" />
+    <MetadataFile FileName="true3.xsd" MetadataType="Schema" ID="b2dd387d-4164-4379-9c18-b5268b8aa2ba" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd5" />
+    <MetadataFile FileName="true4.xsd" MetadataType="Schema" ID="94928dd7-9728-4dee-95e5-c2537eb6b41e" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd2" />
+    <MetadataFile FileName="true.disco" MetadataType="Disco" ID="e32a4de5-f47a-4387-94b2-578be465624f" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?disco" />
+    <MetadataFile FileName="true5.xsd" MetadataType="Schema" ID="486334db-fd7b-4219-9ae1-128acba2a39e" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd3" />
+    <MetadataFile FileName="true6.xsd" MetadataType="Schema" ID="9c059bc0-f5bf-4582-92c1-f2b418d2e730" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?xsd=xsd1" />
+    <MetadataFile FileName="LoginRegRevRateMgmtService.wsdl" MetadataType="Wsdl" ID="3322592f-f013-4e1c-9080-03834668dd83" SourceId="1" SourceUrl="http://localhost:54131/LoginRegRevRateMgmtService.svc/true?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

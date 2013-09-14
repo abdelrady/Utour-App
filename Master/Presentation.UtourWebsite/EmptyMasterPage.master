@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="EmptyMasterPage.master.cs" Inherits="EmptyMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="UpperBorder"></div>
+<div id="logo">
+	<div style="width:29%; float:left; position:relative; top:-30px;">
+        <img src="images/UTourLogo_04.png" style="height: 104px; width: 243px" /></div>
+	<!--<h1><a href="#">Capsicum</a></h1>-->
+	<div style="width:70%; float:right"><h2><a href="http://www.freecsstemplates.org/">Be your own guide</a></h2></div>
+</div>
+<div id="content">
+	<div id="sidebar">
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="Home.aspx" title="">Homepage</a></li>
+				<li><a href="#" title="">About Us</a></li>
+				<li><a href="#" title="">Products</a></li>
+				<li><a href="#" title="">Services</a></li>
+				<li><a href="Contact.aspx" title="">Contact Us</a></li>
+				<li><a href="#" title="">Support</a></li>
+			</ul>
+		</div>
+
+		<div id="login" class="boxed">
+			<h2 class="title">Client Account</h2>
+			<div class="content">
+				<form id="form2" method="post" action="#">
+					<fieldset>
+					<legend>Sign-In</legend>
+					<asp:label ID="Label1" runat="server" Text="Client ID:"></asp:label>
+					<asp:TextBox id="inputtext1" runat="server" name="inputtext1" value=""></asp:TextBox>
+					<asp:label ID="Label2" runat="server" Text="Password:"></asp:label>
+                    <asp:TextBox id="inputtext2" runat="server" name="inputtext2" value=""></asp:TextBox>
+                    &nbsp;<asp:Button ID="inputsubmit1" runat="server" Text="Sign In" />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <%--<asp:CheckBox ID="CheckBox1" Text="Remember me" ForeColor= "#C7894C" runat="server"/>--%>
+                        <br />
+                        <a href="#" style="color:#C7894C;" >Forgot your password?</a>
+                        <asp:Label ID="lblErrorMessage" runat="server" Visible="False" ForeColor="Red" 
+        Font-Bold="True" Font-Size="Large"></asp:Label>
+
+					</fieldset>
+				</form>
+			</div>
+       </div>
+        <div id="Search" class="boxed">
+        <table style="width: 26%;">
+        <tr>
+            <td class="style2">
+                Keyword:</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                <asp:TextBox ID="txtKeyword" runat="server"></asp:TextBox></td>
+        </tr>
+        <tr>
+            <td class="style3">
+                Select Category:</td>
+        </tr>
+        <tr>
+            <td class="style3">
+                <asp:DropDownList ID="dropCategory" runat="server" Height="22px" Width="168px">
+                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem Value="Isl_">Islamic</asp:ListItem>
+                    <asp:ListItem Value="Anc_">Ancient</asp:ListItem>
+                    <asp:ListItem Value="Mod_">Modern</asp:ListItem>
+                    <asp:ListItem Value="Cop_">Coptic</asp:ListItem>
+                    <asp:ListItem Value="Jew_">Jewish</asp:ListItem>
+                </asp:DropDownList></td>
+        </tr>
+        <tr>
+            <td class="style2">
+                Select City:</td>
+        </tr>
+        <tr>
+            <td class="style2">
+                <asp:DropDownList ID="dropCity" runat="server" Height="22px" Width="168px">
+                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem>Cairo</asp:ListItem>
+                    <asp:ListItem>Alexandria</asp:ListItem>
+                    <asp:ListItem>Aswan</asp:ListItem>
+                    <asp:ListItem>Luxor</asp:ListItem>
+                </asp:DropDownList></td>
+        </tr>
+        <tr>
+            <td class="style2">
+                <asp:Button ID="btnSearch" runat="server" Text="Search" Width="60px" 
+                    Height="26px" /></td>
+        </tr>
+    </table>
+        </div>
+		<%--<div id="updates" class="boxed">
+			<h2 class="title">Recent Updates</h2>
+			<div class="content">
+				<ul>
+					<li>
+						<h3>March 5, 2007</h3>
+						<p><a href="#">In posuere eleifend odio quisque semper augue mattis wisi maecenas ligula&#8230;</a></p>
+					</li>
+					<li>
+						<h3>March 3, 2007</h3>
+						<p><a href="#">Quisque dictum integer nisl risus, sagittis convallis, rutrum id, congue, and nibh&#8230;</a></p>
+					</li>
+					<li>
+						<h3>February 28, 2007</h3>
+						<p><a href="#">Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum&#8230;</a></p>
+					</li>
+					<li>
+						<h3>February 25, 2007</h3>
+						<p><a href="#">Nam pede erat, porta eu, lobortis eget, tempus et, tellus. Etiam nequea&#8230;</a></p>
+					</li>
+					<li>
+						<h3>February 20, 2007</h3>
+						<p><a href="#">Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros&#8230;</a></p>
+					</li>
+				</ul>
+			</div>
+		</div>--%>
+	</div>
+	<div id="main">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>	
+	</div>
+	<div id="extra"></div>
+</div>
+<div id="footer">
+	<p style="font-size:15px" id="legal">Copyright &copy; 2012 UTour All Rights Reserved. Designed by UTour Team.</p>
+	<p style="font-size:15px" id="links"><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+</div>
+<%--<div align="center">This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>--%>
+<div id="FootBorder"></div>
+    </form>
+</body>
+</html>

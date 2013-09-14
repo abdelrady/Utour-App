@@ -1,0 +1,51 @@
+﻿/* Content > Sidebar > Login */
+
+#sidebar 
+{
+    position:absolute;
+    top:350px;
+    left:800px;
+	float: right;
+	width: 220px;
+	padding: 60px 20px 0 0;
+}
+
+#login {
+}
+
+#login form {
+}
+
+#login fieldset 
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 111px;
+}
+
+#login legend {
+	display: none;
+}
+
+#login label {
+	font-size: x-small;
+	font-weight: bold;
+}
+
+#login input {
+	margin-bottom: 5px;
+	padding: 2px 5px;
+	border: 1px solid #B43939;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#inputtext1, #inputtext2 {
+	color: #B43939;
+}
+
+#inputsubmit1 {
+	background: #B43939;
+	color: #FFFFFF;
+}
+

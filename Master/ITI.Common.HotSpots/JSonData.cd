@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ITI.Common.HotSpotsInfo.CapturedPicture" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>CapturedPicture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerInfo" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIACAAAiAAIACQCAAAAAAAAgAAEAAAIIAAABAQAAAA=</HashCode>
+      <FileName>LayerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerQueryParam" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICQgCAAAAAgACAAACBAAEgAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>LayerQueryParam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.MesuringDistanceAlgorithms" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>MesuringDistanceAlgorithms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DistributedServices.Contracts.LogInResult" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonCotracts\LogInResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DistributedServices.Contracts.RateInfo" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAAAAIABAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>CommonCotracts\RateInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DistributedServices.Contracts.ReviewInfo" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>CommonCotracts\ReviewInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.CommonCotracts.OperationResult" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonCotracts\OperationResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.CommonCotracts.RateResultReview" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommonCotracts\RateResultReview.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WcfService1.UserInfo" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAhAAAAmAAAAgkoACAAAgAAAAQAICAAAAAA=</HashCode>
+      <FileName>CommonCotracts\UserInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses._Object" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\_Object.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.MimeTypes" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAsYAgQAAIAAFAEIACAAEAAKAAgAAAAABRgAoEAABE=</HashCode>
+      <FileName>LayerClasses\Actions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Actions" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAADQAAAAAIQAAAAAIABBACAAABBAAAAA=</HashCode>
+      <FileName>LayerClasses\Actions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Anchor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Anchor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Animation" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Animation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.AnimationEvent" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\AnimationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Animations" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Animations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.GeoLocation" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>LayerClasses\GeoLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.HotSpots" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQCAAAAAgAAAACABAAAAAEAAAAAEEAAIBAAAAAAAAgA=</HashCode>
+      <FileName>LayerClasses\HotSpots.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Icon" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Icon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.ShowDialog" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\ShowDialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Text" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEABYAAAAAAAIAAAAAAAAAAAAIAAAAAACAAAAAA=</HashCode>
+      <FileName>LayerClasses\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.video" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIEAAAAAAAAAIABAAAAAAAAAAAgA=</HashCode>
+      <FileName>LayerClasses\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Photo" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAIABAAAAAAAAAAAgA=</HashCode>
+      <FileName>LayerClasses\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.review" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Text.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ITI.Common.HotSpotsInfo.LayerClasses.Transform" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Transform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ITI.Common.HotSpotsInfo.LayerClasses.ActionMethods" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LayerClasses\Actions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ITI.Common.HotSpotsInfo.LayerClasses.ActionParams" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAICAAAAgAAAAAAAAACAAAAAAAAAAAACAAAASAAAA=</HashCode>
+      <FileName>LayerClasses\Actions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ITI.Common.HotSpotsInfo.LayerClasses.ActivityType" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAYQAAAAABIQYoCAIkkADCQAACDBIgACEAAAAEKAQAg=</HashCode>
+      <FileName>LayerClasses\Actions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ITI.Common.HotSpotsInfo.LayerClasses.BiwStyles" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>LayerClasses\HotSpots.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

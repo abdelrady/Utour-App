@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b7e4251c-4c60-4da6-ad1f-97fc5956d1b5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54131/HotSpotsMgmtService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="true1.disco" MetadataType="Disco" ID="037fd097-4388-4972-b1d8-c4522b4b0a61" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?disco" />
+    <MetadataFile FileName="HotSpotsMgmtService1.wsdl" MetadataType="Wsdl" ID="3cf30ec2-74af-4c6d-8554-6cf13595e059" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?wsdl" />
+    <MetadataFile FileName="true51.xsd" MetadataType="Schema" ID="32789d91-5b77-442d-92e7-bc7f30852d9e" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd1" />
+    <MetadataFile FileName="true53.xsd" MetadataType="Schema" ID="b53f963e-94c0-4328-a750-3d7e7aeeedf1" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd3" />
+    <MetadataFile FileName="true52.xsd" MetadataType="Schema" ID="16f4195a-ea03-46d7-89ac-18bf76fd3aab" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd4" />
+    <MetadataFile FileName="true54.xsd" MetadataType="Schema" ID="af4828a5-80b1-42a0-a4dc-466e07de362a" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd0" />
+    <MetadataFile FileName="true5.xsd" MetadataType="Schema" ID="960608ba-fefa-4f8a-89f1-0dd10ade7cfb" SourceId="1" SourceUrl="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

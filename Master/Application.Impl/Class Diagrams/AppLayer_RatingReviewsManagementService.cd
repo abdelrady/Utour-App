@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Application.Impl.RatingReviewsManagementService" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="13" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAAAAAAAAAAgAUAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RatingReviewsManagementService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IRatingReviewsManagementService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Application.Contracts.IRatingReviewsManagementService">
+    <Position X="0.5" Y="16.25" Width="5.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

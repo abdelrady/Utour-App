@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29DFA17B-D25C-4D89-8CD9-92F0680B7866}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITI.Nlayerd.Infrastructure.Data.UTour</RootNamespace>
+    <AssemblyName>ITI.Nlayerd.Infrastructure.Data.UTour</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o.Linq, Version=8.0.249.16098, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Db4objects.Db4o.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\UTourEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UTourEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Context\UTourEntities.Context.Extensions.cs">
+      <DependentUpon>UTourEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UTourModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UTourModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdminUsersRepository.cs" />
+    <Compile Include="Repositories\LayerHotSpotsRepository.cs" />
+    <Compile Include="Repositories\MonumentPhotosRepository.cs" />
+    <Compile Include="Repositories\MonumentRatingRepository.cs" />
+    <Compile Include="Repositories\MonumentReviewsRepository.cs" />
+    <Compile Include="Repositories\MonumentVideosRepository.cs" />
+    <Compile Include="Repositories\TouristRepository.cs" />
+    <Compile Include="Repositories\UploadedPhotoRepository.cs" />
+    <Compile Include="UnitOfWork\IUTourUnitOfWork.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IUTourUnitOfWork.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="ClassDiagrams\AdminUsersRepository.cd" />
+    <None Include="ClassDiagrams\Context.cd" />
+    <None Include="ClassDiagrams\DAL.cd" />
+    <None Include="ClassDiagrams\LayerHotSpotsRepository.cd" />
+    <None Include="ClassDiagrams\MonumentPhotosRepository.cd" />
+    <None Include="ClassDiagrams\MonumentRatingRepository.cd" />
+    <None Include="ClassDiagrams\MonumentReviewsRepository.cd" />
+    <None Include="ClassDiagrams\MonumentVideosRepository.cd" />
+    <None Include="ClassDiagrams\TouristRep.cd" />
+    <None Include="ClassDiagrams\UploadPhotoRepo.cd" />
+    <None Include="Context\UTourEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>UTourEntities.Context.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Model\UTourModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UTourModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="UnitOfWork\IUTourUnitOfWork.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IUTourUnitOfWork.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Contracts\Domain.Contracts.csproj">
+      <Project>{AA0A471E-7D20-4AA0-BBD0-C2858DAE8D36}</Project>
+      <Name>Domain.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.DataContracts\Domain.DataContracts.csproj">
+      <Project>{1438F68E-8EE0-4230-AE27-746B21088C55}</Project>
+      <Name>Domain.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITI.Common.Utilities\ITI.Common.Utilities.csproj">
+      <Project>{0D82F0DE-2067-4A01-9EC9-8302B82CC2AB}</Project>
+      <Name>ITI.Common.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\UTourModel.edmx.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

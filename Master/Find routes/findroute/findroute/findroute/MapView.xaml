@@ -1,0 +1,54 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="findroute.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,12">
+            <my:Map Height="482" HorizontalAlignment="Left" Margin="6,6,0,0" Name="map1" VerticalAlignment="Top" Width="444" CredentialsProvider= "Ar2Gfd5hYVtSQUQX_wDTvR7tffAPO_rFNpeUSJkeptVwSMYFc5iLoOi5fXNIIfne" MouseLeftButtonDown="map1_MouseLeftButtonDown" />
+            <Button Content="Route" Height="72" HorizontalAlignment="Left" Margin="29,624,0,0" Name="calculate" VerticalAlignment="Top" Width="160" Click="calculate_Click" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="184,496,0,0" Name="fromtxtbx" Text="" VerticalAlignment="Top" Width="278" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="185,568,0,0" Name="totxtbx" Text="" VerticalAlignment="Top" Width="277" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="12,496,0,0" Name="textBox3" Text="From" VerticalAlignment="Top" Width="177" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="12,568,0,0" Name="textBox4" Text="To" VerticalAlignment="Top" Width="177" />
+            <Button Content="+" Height="94" HorizontalAlignment="Left" Margin="6,0,0,0" Name="button2" VerticalAlignment="Top" Width="62" Background="#00E18F1B" Foreground="#FF19E457" BorderBrush="#FFDE1111" FontWeight="Bold" FontSize="32" Click="button2_Click" />
+            <Button Content="-" Height="86" HorizontalAlignment="Left" Margin="6,101,0,0" Name="button3" VerticalAlignment="Top" Width="62" Background="#00F39715" Foreground="#FF19E457" BorderBrush="#FFDE1111" FontWeight="Bold" FontSize="32" Click="button3_Click" />
+            <Button Content="Change view" Height="72" HorizontalAlignment="Left" Margin="253,626,0,0" Name="view" VerticalAlignment="Top" Width="215" Click="view_Click" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

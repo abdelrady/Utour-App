@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0f35f16b-cf4f-4286-9e67-e69b61559a32" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7935/PhotoUpload.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="true.xsd" MetadataType="Schema" ID="98f7b1b5-0e9b-43cd-8009-33166dff2fc8" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?xsd=xsd1" />
+    <MetadataFile FileName="true1.xsd" MetadataType="Schema" ID="c7cb22ee-cfd4-4ccd-aaf2-1357c83c6a43" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?xsd=xsd3" />
+    <MetadataFile FileName="PhotoUpload.wsdl" MetadataType="Wsdl" ID="2b2dbf26-aca2-4077-a9e9-5bcfcec535bc" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?wsdl" />
+    <MetadataFile FileName="true2.xsd" MetadataType="Schema" ID="1870d981-cce1-439b-a46f-953591244179" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?xsd=xsd0" />
+    <MetadataFile FileName="true.disco" MetadataType="Disco" ID="847856f3-33b5-41b0-9615-f82b249abb69" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?disco" />
+    <MetadataFile FileName="true3.xsd" MetadataType="Schema" ID="56dc9efd-a324-4d70-8508-9c118a00099d" SourceId="1" SourceUrl="http://localhost:7935/PhotoUpload.svc/true?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

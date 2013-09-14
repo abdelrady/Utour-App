@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B42BAD55-8106-4365-9FD5-01105E3A9715}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITI.Common.HotSpotsInfo</RootNamespace>
+    <AssemblyName>ITI.Common.HotSpotsInfo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapturedPicture.cs" />
+    <Compile Include="CommonCotracts\LogInResult.cs" />
+    <Compile Include="CommonCotracts\OperationResult.cs" />
+    <Compile Include="CommonCotracts\RateInfo.cs" />
+    <Compile Include="CommonCotracts\RateResultReview.cs" />
+    <Compile Include="CommonCotracts\ReviewInfo.cs" />
+    <Compile Include="CommonCotracts\UserInfo.cs" />
+    <Compile Include="LayerQueryParam.cs" />
+    <Compile Include="LayerInfo.cs" />
+    <Compile Include="LayerClasses\Actions.cs" />
+    <Compile Include="LayerClasses\Anchor.cs" />
+    <Compile Include="LayerClasses\Animation.cs" />
+    <Compile Include="LayerClasses\AnimationEvent.cs" />
+    <Compile Include="LayerClasses\Animations.cs" />
+    <Compile Include="LayerClasses\GeoLocation.cs" />
+    <Compile Include="LayerClasses\HotSpots.cs" />
+    <Compile Include="LayerClasses\Icon.cs" />
+    <Compile Include="LayerClasses\ShowDialog.cs" />
+    <Compile Include="LayerClasses\Text.cs" />
+    <Compile Include="LayerClasses\Transform.cs" />
+    <Compile Include="LayerClasses\_Object.cs" />
+    <Compile Include="MesuringDistanceAlgorithms.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="JSonData.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

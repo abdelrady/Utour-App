@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54131/PhotoUpload.svc/true?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.CommonCotracts" />
+  <xs:element name="UploadPhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hotSpotID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImageBytes" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UploadPhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.CommonCotracts" minOccurs="0" name="UploadPhotoResult" nillable="true" type="q1:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

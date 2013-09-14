@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DistributedServices.UTourService.HotSpotsMgmtService" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6" Width="12" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAIAAAAAAAQAAAAAAABAAAA=</HashCode>
+      <FileName>HotSpotsMgmtService.svc.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IHotSpotsManagmentContract" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="DistributedServices.Contracts.IHotSpotsManagmentContract">
+    <Position X="1" Y="9.25" Width="12" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

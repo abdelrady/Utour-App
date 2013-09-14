@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DistributedServices.UTourService.HotSpotsMgmtService2" CodeBehind="HotSpotsMgmtService2.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory"%>

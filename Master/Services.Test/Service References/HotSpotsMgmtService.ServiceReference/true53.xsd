@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ITI.Common.HotSpotsInfo.LayerClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:54131/HotSpotsMgmtService.svc/true?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfActions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Actions" nillable="true" type="tns:Actions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActions" nillable="true" type="tns:ArrayOfActions" />
+  <xs:complexType name="Actions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activityMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="activityType" type="tns:ActivityType" />
+      <xs:element minOccurs="0" name="autoTrigger" type="xs:boolean" />
+      <xs:element minOccurs="0" name="autoTriggerOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="autoTriggerRange" type="xs:int" />
+      <xs:element minOccurs="0" name="closeBiw" type="xs:boolean" />
+      <xs:element minOccurs="0" name="contentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="method" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="params" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="showActivity" type="xs:boolean" />
+      <xs:element minOccurs="0" name="uri" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Actions" nillable="true" type="tns:Actions" />
+  <xs:simpleType name="ActivityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Info">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Audio">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Video">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Phone_Call">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Email_Message">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Position_Map_Navigate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Add">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Remove">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Edit">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Collect">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Play_Song">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Play_In_Game">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Share_Post_Publish">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pin_Mark_On_Map">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Check_In_Out">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Log_In_Out">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lock_Unlock">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="List_Scores">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Money_Pay_Buy">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Open">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Close">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Switch_2_Layer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Yes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Increase_Decrease">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="View_Examine_Details">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Add_2_Favorites">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Kill_Hit_Attack">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Heal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Defend">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Repair">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Use_Interact_Switch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Animate">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Scoreboard">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Generic_Action">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="No">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ActivityType" nillable="true" type="tns:ActivityType" />
+  <xs:complexType name="ArrayOfHotSpots">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HotSpots" nillable="true" type="tns:HotSpots" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotSpots" nillable="true" type="tns:ArrayOfHotSpots" />
+  <xs:complexType name="HotSpots">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actions" nillable="true" type="tns:ArrayOfActions" />
+      <xs:element minOccurs="0" name="anchor" nillable="true" type="tns:Anchor" />
+      <xs:element minOccurs="0" name="animations" nillable="true" type="tns:Animations" />
+      <xs:element minOccurs="0" name="biwStyle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="imageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="inFocus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="object" nillable="true" type="tns:_Object" />
+      <xs:element minOccurs="0" name="showBiwOnClick" type="xs:boolean" />
+      <xs:element minOccurs="0" name="showSmallBiw" type="xs:boolean" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="tns:Text" />
+      <xs:element minOccurs="0" name="transform" nillable="true" type="tns:Transform" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HotSpots" nillable="true" type="tns:HotSpots" />
+  <xs:complexType name="Anchor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="geolocation" nillable="true" type="tns:GeoLocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Anchor" nillable="true" type="tns:Anchor" />
+  <xs:complexType name="GeoLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lon" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoLocation" nillable="true" type="tns:GeoLocation" />
+  <xs:complexType name="Animations">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Animations" nillable="true" type="tns:Animations" />
+  <xs:complexType name="_Object">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="_Object" nillable="true" type="tns:_Object" />
+  <xs:complexType name="Text">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="footnote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longdescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="photos" nillable="true" type="tns:ArrayOfPhoto" />
+      <xs:element minOccurs="0" name="rate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="reviews" nillable="true" type="tns:ArrayOfreview" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="videos" nillable="true" type="tns:ArrayOfvideo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Text" nillable="true" type="tns:Text" />
+  <xs:complexType name="ArrayOfPhoto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Photo" nillable="true" type="tns:Photo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhoto" nillable="true" type="tns:ArrayOfPhoto" />
+  <xs:complexType name="Photo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Photo" nillable="true" type="tns:Photo" />
+  <xs:complexType name="ArrayOfreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="review" nillable="true" type="tns:review" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfreview" nillable="true" type="tns:ArrayOfreview" />
+  <xs:complexType name="review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usercomment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="review" nillable="true" type="tns:review" />
+  <xs:complexType name="ArrayOfvideo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="video" nillable="true" type="tns:video" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvideo" nillable="true" type="tns:ArrayOfvideo" />
+  <xs:complexType name="video">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="length" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="video" nillable="true" type="tns:video" />
+  <xs:complexType name="Transform">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Transform" nillable="true" type="tns:Transform" />
+</xs:schema>
